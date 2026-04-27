@@ -4,7 +4,6 @@ export type Category =
   | "anime"
   | "figure"
   | "gacha"
-  | "mangacafe"
   | "cafecollab"
   | "arttoy"
   | "maid"

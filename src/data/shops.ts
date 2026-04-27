@@ -7,7 +7,6 @@ export const CATEGORY_META: Record<Category, {
   anime:      { ko: "애니굿즈샵",   en: "Anime Goods",     ja: "アニメグッズ",   "zh-tw": "動漫周邊",   "zh-cn": "动漫周边",   vi: "Hàng Anime",           th: "สินค้าอนิเมะ",      color: "cat-anime",      emoji: "🎌" },
   figure:     { ko: "피규어샵",     en: "Figure Shop",     ja: "フィギュア",     "zh-tw": "模型店",     "zh-cn": "手办店",     vi: "Cửa hàng Figure",      th: "ร้านฟิกเกอร์",      color: "cat-figure",     emoji: "🤖" },
   gacha:      { ko: "가챠/복권샵",  en: "Gacha / Kuji",    ja: "ガチャ・くじ",   "zh-tw": "扭蛋・抽選", "zh-cn": "扭蛋・抽奖", vi: "Gacha / Kuji",         th: "กาชา / คูจิ",       color: "cat-gacha",      emoji: "🎰" },
-  mangacafe:  { ko: "한국만화카페", en: "Manga Café",      ja: "漫画喫茶",       "zh-tw": "漫畫咖啡",   "zh-cn": "漫画咖啡",   vi: "Quán Manga",           th: "มังงะคาเฟ่",        color: "cat-mangacafe",  emoji: "📚" },
   cafecollab: { ko: "카페/콜라보",  en: "Café / Collab",   ja: "カフェ・コラボ", "zh-tw": "聯名咖啡",   "zh-cn": "联名咖啡",   vi: "Cà phê / Collab",      th: "คาเฟ่ / คอลแลบ",   color: "cat-cafecollab", emoji: "☕" },
   arttoy:     { ko: "아트토이",     en: "Art Toy",         ja: "アートトイ",     "zh-tw": "藝術玩具",   "zh-cn": "艺术玩具",   vi: "Art Toy",              th: "อาร์ตทอย",          color: "cat-arttoy",     emoji: "🧸" },
   maid:       { ko: "메이드카페",   en: "Maid Café",       ja: "メイド喫茶",     "zh-tw": "女僕咖啡",   "zh-cn": "女仆咖啡",   vi: "Quán Maid",            th: "เมดคาเฟ่",          color: "cat-maid",       emoji: "🎀" },
@@ -250,15 +249,18 @@ export const SHOPS: Shop[] = [
   {
     id: "omochaland",
     name: {
-      ko: "오모차랜드", en: "Omocha Land", ja: "おもちゃランド",
-      "zh-tw": "玩具樂園", "zh-cn": "玩具乐园",
-      vi: "Omocha Land", th: "โอโมชะแลนด์",
+      ko: "OMOCHALAND (오모차랜드)", en: "OMOCHALAND", ja: "OMOCHALAND",
+      "zh-tw": "OMOCHALAND", "zh-cn": "OMOCHALAND",
+      vi: "OMOCHALAND", th: "OMOCHALAND",
     },
     category: "figure",
     address: "부산광역시 부산진구 중앙대로680번길 45-5 2F",
     addressEn: "45-5 Jungang-daero 680beon-gil 2F, Busanjin-gu, Busan",
-    hours: "12:00–21:00",
-    hoursEn: "12:00–21:00",
+    // ⚠️ TODO: Verify and input the exact opening hours for "OMOCHALAND"
+    // (or "The Goods Busan Seomyeon Store") via Naver Maps, Kakao Maps, and SNS (X, Instagram).
+    hours: "",
+    hoursEn: "",
+    hoursNote: "네이버지도·카카오맵·SNS(X·인스타그램)에서 영업시간 확인 요망",
     instagram: "omochaland_busan",
     naverMap: naver("오모차랜드 서면"),
     kakaoMap: kakao("오모차랜드 부산"),
@@ -465,45 +467,6 @@ export const SHOPS: Shop[] = [
     status: "partial",
   },
 
-  // ── 한국만화카페 ──
-  {
-    id: "simsim-puri",
-    name: {
-      ko: "심심푸리", en: "Simsim Puri", ja: "シムシムプリ",
-      "zh-tw": "Simsim Puri", "zh-cn": "Simsim Puri",
-      vi: "Simsim Puri", th: "ซิมซิมปูรี",
-    },
-    category: "mangacafe",
-    address: "부산광역시 부산진구 중앙대로702번길 33 5F",
-    addressEn: "33 Jungang-daero 702beon-gil 5F, Busanjin-gu, Busan",
-    hours: "10:30–23:00 (L.O. 22:30)",
-    hoursEn: "10:30–23:00 (L.O. 22:30)",
-    naverMap: naver("심심푸리 서면"),
-    kakaoMap: kakao("심심푸리 서면"),
-    tags: ["만화", "음료포함", "1인룸"],
-    hoursNote: "1시간+음료 5,500원~",
-    payments: ["card", "cash", "kakao"],
-    status: "verified",
-  },
-  {
-    id: "beultoon",
-    name: {
-      ko: "벌툰 인더스트리얼", en: "Beultoon Industrial", ja: "ベルトゥーン・インダストリアル",
-      "zh-tw": "Beultoon Industrial", "zh-cn": "Beultoon Industrial",
-      vi: "Beultoon Industrial", th: "เบิลทูน อินดัสทรีอัล",
-    },
-    category: "mangacafe",
-    address: "부산광역시 부산진구 서전로10번길 61 6F",
-    addressEn: "61 Seojeon-ro 10beon-gil 6F, Busanjin-gu, Busan",
-    hours: "10:00–24:00",
-    hoursEn: "10:00–24:00",
-    naverMap: naver("벌툰 인더스트리얼"),
-    kakaoMap: kakao("벌툰 인더스트리얼 서면"),
-    tags: ["130평", "개인룸", "OTT"],
-    payments: ["card", "cash", "kakao", "naver"],
-    status: "verified",
-  },
-
   // ── 가챠샵 ──
   {
     id: "gacha-shop-seomyeon",
@@ -634,8 +597,9 @@ export const ROUTES: Route[] = [
       "zh-tw": "雨天室內路線", "zh-cn": "雨天室内路线",
       vi: "Lộ Trình Trong Nhà Ngày Mưa", th: "เส้นทางในร่มวันฝนตก",
     },
-    stops: ["animate-busan", "popmart-samjung", "kuji-land", "simsim-puri"],
-    durationHours: 3, budgetMin: 10000, budgetMax: 50000, difficulty: "beginner",
+    // ⚠️ Course stops cleared — to be repopulated. Section title only for now.
+    stops: [],
+    durationHours: 0, budgetMin: 0, budgetMax: 0, difficulty: "beginner",
     colorClass: "from-cat-figure to-cat-cafecollab",
   },
   {
@@ -660,6 +624,6 @@ export const ROUTES: Route[] = [
     },
     stops: ["kuji-land", "brother-young", "gacha-ocean", "gacha-shop-seomyeon"],
     durationHours: 2, budgetMin: 20000, budgetMax: 50000, difficulty: "beginner",
-    colorClass: "from-cat-gacha to-cat-mangacafe",
+    colorClass: "from-cat-gacha to-cat-figure",
   },
 ];

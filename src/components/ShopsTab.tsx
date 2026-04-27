@@ -22,7 +22,6 @@ export function ShopsTab() {
     { key: "anime", label: CATEGORY_META.anime[lang as "ko"] },
     { key: "figure", label: CATEGORY_META.figure[lang as "ko"] },
     { key: "gacha", label: CATEGORY_META.gacha[lang as "ko"] },
-    { key: "mangacafe", label: CATEGORY_META.mangacafe[lang as "ko"] },
     { key: "arttoy", label: CATEGORY_META.arttoy[lang as "ko"] },
     { key: "cafecollab", label: CATEGORY_META.cafecollab[lang as "ko"] },
     { key: "open", label: `🟢 ${t("filter_open")}` },

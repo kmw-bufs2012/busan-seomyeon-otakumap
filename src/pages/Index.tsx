@@ -38,18 +38,17 @@ const Index = () => {
         {/* Hero background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero-seomyeon.svg')" }}
+          style={{ backgroundImage: "url('/images/hero-otaku.jpg')" }}
+          aria-hidden="true"
         />
-        {/* Overlay gradient */}
-        <div className="absolute inset-0"
+        {/* Single dark overlay for legibility — no purple/pink gradient covering stats */}
+        <div
+          className="absolute inset-0"
           style={{
-            background: "linear-gradient(to right, rgba(5,0,20,0.85) 0%, rgba(5,0,20,0.6) 60%, rgba(5,0,20,0.3) 100%)",
+            background:
+              "linear-gradient(to right, rgba(5,0,20,0.85) 0%, rgba(5,0,20,0.55) 55%, rgba(5,0,20,0.35) 100%)",
           }}
-        />
-        <div className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "radial-gradient(circle at 20% 20%, hsl(245 100% 69% / 0.4), transparent 40%), radial-gradient(circle at 80% 60%, hsl(335 100% 71% / 0.4), transparent 40%)",
-          }}
+          aria-hidden="true"
         />
         <div className="relative container max-w-7xl mx-auto px-4 py-20 md:py-28 text-white">
           <div className="max-w-3xl">
@@ -57,24 +56,27 @@ const Index = () => {
               <span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
               Busan · Seomyeon · 釜山
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-balance mb-5">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-balance mb-5 whitespace-nowrap">
               {t("hero_title")}
             </h1>
             <p className="text-base md:text-lg text-white/80 max-w-2xl break-keep leading-relaxed">
               {t("hero_sub")}
             </p>
 
-            {/* Stats */}
+            {/* Stats — solid white text on subtle dark glass, no gradient overlay */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 max-w-3xl">
               {[
-                { n: 23, l: t("stats_shops") },
+                { n: SHOPS.length, l: t("stats_shops") },
                 { n: 7, l: t("stats_languages") },
                 { n: "🏙", l: t("stats_area") },
                 { n: "🔄", l: t("stats_update") },
               ].map((s, i) => (
-                <div key={i} className="rounded-2xl bg-white/5 backdrop-blur border border-white/10 px-4 py-3">
-                  <div className="text-2xl md:text-3xl font-extrabold gradient-hero bg-clip-text text-transparent">{s.n}</div>
-                  <div className="text-xs text-white/70 mt-1">{s.l}</div>
+                <div
+                  key={i}
+                  className="rounded-2xl bg-black/40 backdrop-blur border border-white/15 px-4 py-3"
+                >
+                  <div className="text-2xl md:text-3xl font-extrabold text-white">{s.n}</div>
+                  <div className="text-xs text-white mt-1 font-medium">{s.l}</div>
                 </div>
               ))}
             </div>

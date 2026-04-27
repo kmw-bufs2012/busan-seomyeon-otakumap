@@ -15,7 +15,7 @@ type Dict = Record<string, string>;
 export const TRANSLATIONS: Record<Lang, Dict> = {
   ko: {
     brand: "ANIBUS · 부산 애니맵",
-    hero_title: "부산 서면, 오타쿠의 모든 것",
+    hero_title: "오타쿠의 모든 것",
     hero_sub: "애니메이션 굿즈·피규어·가챠·테마 카페 — 7개 언어로 안내하는 부산 최고의 애니맵.",
     tab_shops: "🛍 애니·굿즈 매장",
     tab_cafes: "☕ 테마 카페",
@@ -70,7 +70,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   en: {
     brand: "ANIBUS · Busan Anime Map",
-    hero_title: "Seomyeon, Busan — Otaku Heaven",
+    hero_title: "Everything for Otaku",
     hero_sub: "Anime goods, figures, gacha & theme cafés — Busan's definitive anime map in 7 languages.",
     tab_shops: "🛍 Shops & Goods",
     tab_cafes: "☕ Theme Cafés",
@@ -125,7 +125,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   ja: {
     brand: "ANIBUS · 釜山アニメマップ",
-    hero_title: "釜山・西面、オタクの全て",
+    hero_title: "オタクのすべて",
     hero_sub: "アニメグッズ・フィギュア・ガチャ・テーマカフェ — 7言語対応の決定版マップ。",
     tab_shops: "🛍 ショップ・グッズ",
     tab_cafes: "☕ テーマカフェ",
@@ -180,7 +180,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   "zh-tw": {
     brand: "ANIBUS · 釜山動漫地圖",
-    hero_title: "釜山西面 · 動漫迷天堂",
+    hero_title: "御宅族的一切",
     hero_sub: "動漫周邊・模型・扭蛋・主題咖啡館 — 七語對應的最完整地圖。",
     tab_shops: "🛍 商店與周邊",
     tab_cafes: "☕ 主題咖啡",
@@ -235,7 +235,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   "zh-cn": {
     brand: "ANIBUS · 釜山动漫地图",
-    hero_title: "釜山西面 · 二次元天堂",
+    hero_title: "御宅族的一切",
     hero_sub: "动漫周边・手办・扭蛋・主题咖啡馆 — 七语对应的最完整地图。",
     tab_shops: "🛍 商店与周边",
     tab_cafes: "☕ 主题咖啡",
@@ -290,7 +290,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   vi: {
     brand: "ANIBUS · Bản đồ Anime Busan",
-    hero_title: "Seomyeon, Busan — Thiên đường Otaku",
+    hero_title: "Tất cả cho Otaku",
     hero_sub: "Hàng anime, figure, gacha & quán cà phê theo chủ đề — Bản đồ anime Busan đầy đủ nhất bằng 7 ngôn ngữ.",
     tab_shops: "🛍 Cửa hàng & Hàng hóa",
     tab_cafes: "☕ Quán Cà Phê Chủ Đề",
@@ -345,7 +345,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   },
   th: {
     brand: "ANIBUS · แผนที่อนิเมะปูซาน",
-    hero_title: "ซอมยอน ปูซาน — สวรรค์ของโอตาคุ",
+    hero_title: "ทุกสิ่งสำหรับโอตาคุ",
     hero_sub: "สินค้าอนิเมะ, ฟิกเกอร์, กาชา & คาเฟ่ธีม — แผนที่อนิเมะปูซานที่สมบูรณ์ที่สุดใน 7 ภาษา",
     tab_shops: "🛍 ร้านค้า & สินค้า",
     tab_cafes: "☕ คาเฟ่ธีม",
@@ -373,7 +373,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     share: "แชร์",
     verified: "ยืนยันแล้ว",
     partial: "ยืนยันบางส่ว���",
-    unverified: "ยังไม่ยืนยันที่อยู่",
+    unverified: "ยังไม่ย���นยันที่อยู่",
     warning_cafe_title: "⚠️ แจ้งเรื่องราคา",
     warning_cafe_price: "คาเฟ่ธีมมีราคาสูงกว่าคาเฟ่ทั่วไปพอสมควร กรุณาตรวจสอบเมนูก่อนเข้าร้าน",
     menu_price_note: "※ ราคาเมนูอาจมีการเปลี่ยนแปลง ดูราคาล่าสุดได้ที่ Naver Map",
