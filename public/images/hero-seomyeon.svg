@@ -1,0 +1,321 @@
+<svg viewBox="0 0 1200 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0010"/>
+      <stop offset="50%" stop-color="#1a0535"/>
+      <stop offset="100%" stop-color="#2d0a5c"/>
+    </linearGradient>
+    <linearGradient id="neon-pink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff2d9b"/>
+      <stop offset="100%" stop-color="#ff6fd8"/>
+    </linearGradient>
+    <linearGradient id="neon-blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7b5ea7"/>
+    </linearGradient>
+    <linearGradient id="neon-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b24fff"/>
+      <stop offset="100%" stop-color="#6a1fa0"/>
+    </linearGradient>
+    <linearGradient id="bldg-dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0624"/>
+      <stop offset="100%" stop-color="#050010"/>
+    </linearGradient>
+    <linearGradient id="bldg-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#180838"/>
+      <stop offset="100%" stop-color="#0a0220"/>
+    </linearGradient>
+    <filter id="glow-pink" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-blue" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blur-bg">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1200" height="480" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <g opacity="0.7">
+    <circle cx="50" cy="30" r="1" fill="white" opacity="0.9"/>
+    <circle cx="120" cy="15" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="200" cy="45" r="1" fill="white" opacity="0.8"/>
+    <circle cx="310" cy="20" r="1" fill="white" opacity="0.6"/>
+    <circle cx="450" cy="10" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="560" cy="35" r="1" fill="white" opacity="0.7"/>
+    <circle cx="670" cy="12" r="1" fill="#b8f" opacity="0.8"/>
+    <circle cx="750" cy="28" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="870" cy="18" r="1" fill="white" opacity="0.9"/>
+    <circle cx="950" cy="40" r="1" fill="#8df" opacity="0.7"/>
+    <circle cx="1050" cy="22" r="1.5" fill="white" opacity="0.8"/>
+    <circle cx="1150" cy="8" r="1" fill="white" opacity="0.9"/>
+    <circle cx="85" cy="65" r="1" fill="#f8f" opacity="0.6"/>
+    <circle cx="380" cy="55" r="1" fill="white" opacity="0.8"/>
+    <circle cx="620" cy="60" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="820" cy="50" r="1" fill="#aef" opacity="0.9"/>
+    <circle cx="1100" cy="60" r="1" fill="white" opacity="0.6"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="1080" cy="70" r="42" fill="#fdf3c0" opacity="0.15"/>
+  <circle cx="1080" cy="70" r="38" fill="#fdf9e8" opacity="0.12"/>
+
+  <!-- Far background buildings (very dark, tiny windows) -->
+  <g opacity="0.5">
+    <rect x="0" y="200" width="60" height="260" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="55" y="230" width="40" height="230" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="90" y="185" width="55" height="275" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="140" y="220" width="35" height="240" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="170" y="195" width="70" height="265" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="240" y="210" width="45" height="250" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="280" y="180" width="60" height="280" fill="url(#bldg-dark)" rx="2"/>
+    <!-- tiny window lights -->
+    <g fill="#ffcc44" opacity="0.6">
+      <rect x="10" y="215" width="3" height="4" rx="0.5"/>
+      <rect x="18" y="225" width="3" height="4" rx="0.5"/>
+      <rect x="10" y="240" width="3" height="4" rx="0.5"/>
+      <rect x="100" y="200" width="3" height="4" rx="0.5"/>
+      <rect x="110" y="220" width="3" height="4" rx="0.5"/>
+      <rect x="185" y="210" width="3" height="4" rx="0.5"/>
+      <rect x="200" y="230" width="3" height="4" rx="0.5"/>
+      <rect x="293" y="196" width="3" height="4" rx="0.5"/>
+      <rect x="305" y="215" width="3" height="4" rx="0.5"/>
+    </g>
+  </g>
+
+  <!-- Mid buildings right side -->
+  <g opacity="0.5">
+    <rect x="860" y="190" width="65" height="270" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="920" y="210" width="50" height="250" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="965" y="185" width="80" height="275" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="1040" y="220" width="55" height="240" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="1090" y="200" width="70" height="260" fill="url(#bldg-dark)" rx="2"/>
+    <rect x="1155" y="215" width="50" height="245" fill="url(#bldg-dark)" rx="2"/>
+    <g fill="#ffcc44" opacity="0.6">
+      <rect x="875" y="205" width="3" height="4" rx="0.5"/>
+      <rect x="890" y="230" width="3" height="4" rx="0.5"/>
+      <rect x="980" y="200" width="3" height="4" rx="0.5"/>
+      <rect x="995" y="225" width="3" height="4" rx="0.5"/>
+      <rect x="1055" y="235" width="3" height="4" rx="0.5"/>
+      <rect x="1105" y="215" width="3" height="4" rx="0.5"/>
+    </g>
+  </g>
+
+  <!-- Main foreground buildings -->
+  <!-- Left tall building -->
+  <rect x="0" y="120" width="90" height="360" fill="url(#bldg-mid)" rx="3"/>
+  <g fill="#1a3a7a" opacity="0.8">
+    <rect x="8" y="135" width="10" height="14" rx="1"/>
+    <rect x="24" y="135" width="10" height="14" rx="1"/>
+    <rect x="40" y="135" width="10" height="14" rx="1"/>
+    <rect x="56" y="135" width="10" height="14" rx="1"/>
+    <rect x="72" y="135" width="10" height="14" rx="1"/>
+    <rect x="8" y="160" width="10" height="14" rx="1"/>
+    <rect x="24" y="160" width="10" height="14" rx="1"/>
+    <rect x="40" y="160" width="10" height="14" fill="#ffaa00" rx="1" opacity="0.9"/>
+    <rect x="56" y="160" width="10" height="14" rx="1"/>
+    <rect x="72" y="160" width="10" height="14" fill="#ffaa00" rx="1" opacity="0.9"/>
+    <rect x="8" y="185" width="10" height="14" fill="#ffaa00" rx="1" opacity="0.9"/>
+    <rect x="24" y="185" width="10" height="14" rx="1"/>
+    <rect x="40" y="185" width="10" height="14" rx="1"/>
+    <rect x="56" y="185" width="10" height="14" fill="#ffaa00" rx="1" opacity="0.9"/>
+    <rect x="72" y="185" width="10" height="14" rx="1"/>
+  </g>
+  <!-- Neon sign on left building -->
+  <rect x="5" y="260" width="80" height="32" rx="4" fill="#ff0066" opacity="0.2" filter="url(#glow-soft)"/>
+  <text x="45" y="281" text-anchor="middle" font-size="13" font-weight="bold" font-family="sans-serif" fill="#ff2d9b" filter="url(#glow-pink)">서면</text>
+
+  <!-- Center-left building -->
+  <rect x="340" y="145" width="110" height="335" fill="url(#bldg-mid)" rx="3"/>
+  <g fill="#1a2a5a" opacity="0.9">
+    <rect x="350" y="160" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="368" y="160" width="12" height="16" rx="1"/>
+    <rect x="386" y="160" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="404" y="160" width="12" height="16" rx="1"/>
+    <rect x="422" y="160" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="350" y="188" width="12" height="16" rx="1"/>
+    <rect x="368" y="188" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="386" y="188" width="12" height="16" rx="1"/>
+    <rect x="404" y="188" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="422" y="188" width="12" height="16" rx="1"/>
+    <rect x="350" y="216" width="12" height="16" rx="1" fill="#4466ff" opacity="0.9"/>
+    <rect x="368" y="216" width="12" height="16" rx="1"/>
+    <rect x="386" y="216" width="12" height="16" rx="1" fill="#4466ff" opacity="0.9"/>
+    <rect x="404" y="216" width="12" height="16" rx="1" fill="#ffaa00" opacity="0.9"/>
+    <rect x="422" y="216" width="12" height="16" rx="1"/>
+  </g>
+
+  <!-- Samjung Tower (center) - tallest -->
+  <rect x="490" y="60" width="130" height="420" fill="#120828" rx="4"/>
+  <rect x="494" y="64" width="122" height="412" fill="#160a30" rx="3"/>
+  <!-- Samjung windows grid -->
+  <g fill="#1e3a8a" opacity="0.8">
+    <rect x="500" y="75" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="520" y="75" width="14" height="18" rx="1"/>
+    <rect x="540" y="75" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="560" y="75" width="14" height="18" rx="1"/>
+    <rect x="580" y="75" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="600" y="75" width="14" height="18" rx="1"/>
+    <rect x="500" y="102" width="14" height="18" rx="1"/>
+    <rect x="520" y="102" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="540" y="102" width="14" height="18" rx="1" fill="#4488ff" opacity="0.9"/>
+    <rect x="560" y="102" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="580" y="102" width="14" height="18" rx="1"/>
+    <rect x="600" y="102" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="500" y="129" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="520" y="129" width="14" height="18" rx="1"/>
+    <rect x="540" y="129" width="14" height="18" rx="1"/>
+    <rect x="560" y="129" width="14" height="18" rx="1" fill="#ff4488" opacity="0.9"/>
+    <rect x="580" y="129" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="600" y="129" width="14" height="18" rx="1"/>
+    <rect x="500" y="156" width="14" height="18" rx="1"/>
+    <rect x="520" y="156" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="540" y="156" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="560" y="156" width="14" height="18" rx="1"/>
+    <rect x="580" y="156" width="14" height="18" rx="1" fill="#4488ff" opacity="0.9"/>
+    <rect x="600" y="156" width="14" height="18" rx="1" fill="#ffcc00" opacity="0.9"/>
+  </g>
+  <!-- Samjung banner: CGV + Animate -->
+  <rect x="494" y="290" width="122" height="50" rx="2" fill="#0a1f6e" opacity="0.9"/>
+  <text x="555" y="313" text-anchor="middle" font-size="11" font-weight="bold" font-family="sans-serif" fill="#4488ff" filter="url(#glow-blue)">CGV</text>
+  <text x="555" y="330" text-anchor="middle" font-size="9" font-weight="bold" font-family="sans-serif" fill="#00ccff" filter="url(#glow-blue)">animate</text>
+  <!-- Samjung roof antenna -->
+  <rect x="552" y="50" width="6" height="15" fill="#335" rx="1"/>
+  <circle cx="555" cy="48" r="3" fill="#ff2d9b" opacity="0.9" filter="url(#glow-pink)"/>
+
+  <!-- Right side building -->
+  <rect x="780" y="135" width="100" height="345" fill="url(#bldg-mid)" rx="3"/>
+  <g fill="#1a2a5a" opacity="0.9">
+    <rect x="790" y="150" width="12" height="15" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="808" y="150" width="12" height="15" rx="1"/>
+    <rect x="826" y="150" width="12" height="15" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="844" y="150" width="12" height="15" rx="1"/>
+    <rect x="862" y="150" width="12" height="15" rx="1" fill="#ff4444" opacity="0.9"/>
+    <rect x="790" y="175" width="12" height="15" rx="1"/>
+    <rect x="808" y="175" width="12" height="15" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="826" y="175" width="12" height="15" rx="1" fill="#4488ff" opacity="0.9"/>
+    <rect x="844" y="175" width="12" height="15" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="862" y="175" width="12" height="15" rx="1"/>
+  </g>
+  <!-- Neon sign right -->
+  <rect x="785" y="265" width="90" height="28" rx="4" fill="#0044ff" opacity="0.2" filter="url(#glow-soft)"/>
+  <text x="830" y="284" text-anchor="middle" font-size="12" font-weight="bold" font-family="sans-serif" fill="#00ccff" filter="url(#glow-blue)">서브컬처</text>
+
+  <!-- Far right building -->
+  <rect x="1100" y="160" width="100" height="320" fill="url(#bldg-mid)" rx="3"/>
+  <g fill="#1a2a5a" opacity="0.9">
+    <rect x="1110" y="175" width="11" height="14" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="1127" y="175" width="11" height="14" rx="1"/>
+    <rect x="1144" y="175" width="11" height="14" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="1161" y="175" width="11" height="14" rx="1" fill="#4488ff" opacity="0.9"/>
+    <rect x="1178" y="175" width="11" height="14" rx="1"/>
+    <rect x="1110" y="200" width="11" height="14" rx="1"/>
+    <rect x="1127" y="200" width="11" height="14" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="1144" y="200" width="11" height="14" rx="1"/>
+    <rect x="1161" y="200" width="11" height="14" rx="1" fill="#ffcc00" opacity="0.9"/>
+    <rect x="1178" y="200" width="11" height="14" rx="1" fill="#ff4488" opacity="0.9"/>
+  </g>
+
+  <!-- Neon hanging signs left street -->
+  <rect x="95" y="310" width="90" height="22" rx="4" fill="none" stroke="#ff2d9b" stroke-width="1.5" opacity="0.7" filter="url(#glow-pink)"/>
+  <text x="140" y="325" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#ff6fd8" filter="url(#glow-pink)">ANIME SHOP</text>
+
+  <rect x="95" y="345" width="90" height="22" rx="4" fill="none" stroke="#00ccff" stroke-width="1.5" opacity="0.7" filter="url(#glow-blue)"/>
+  <text x="140" y="360" text-anchor="middle" font-size="10" font-family="sans-serif" fill="#7fffff" filter="url(#glow-blue)">フィギュア</text>
+
+  <!-- Street level glow -->
+  <rect x="0" y="440" width="1200" height="40" fill="url(#neon-pink)" opacity="0.07"/>
+  <rect x="0" y="445" width="1200" height="35" fill="url(#neon-blue)" opacity="0.05"/>
+
+  <!-- Ground/pavement -->
+  <rect x="0" y="460" width="1200" height="20" fill="#07021a"/>
+
+  <!-- Neon road reflections -->
+  <ellipse cx="300" cy="470" rx="200" ry="8" fill="#ff2d9b" opacity="0.08" filter="url(#glow-soft)"/>
+  <ellipse cx="800" cy="468" rx="250" ry="6" fill="#00ccff" opacity="0.06" filter="url(#glow-soft)"/>
+  <ellipse cx="555" cy="472" rx="120" ry="5" fill="#b24fff" opacity="0.08" filter="url(#glow-soft)"/>
+
+  <!-- Sakura petals floating (anime-style) -->
+  <g opacity="0.85" filter="url(#glow-pink)">
+    <!-- Petal shape using paths -->
+    <ellipse cx="80" cy="220" rx="6" ry="3" fill="#ffb8d9" transform="rotate(-30 80 220)"/>
+    <ellipse cx="160" cy="180" rx="5" ry="2.5" fill="#ffc8e0" transform="rotate(20 160 180)"/>
+    <ellipse cx="240" cy="260" rx="7" ry="3.5" fill="#ffaad0" transform="rotate(-15 240 260)"/>
+    <ellipse cx="420" cy="195" rx="5" ry="2.5" fill="#ffb8d9" transform="rotate(40 420 195)"/>
+    <ellipse cx="700" cy="170" rx="6" ry="3" fill="#ffc0e0" transform="rotate(-25 700 170)"/>
+    <ellipse cx="830" cy="200" rx="5" ry="2.5" fill="#ffb0d5" transform="rotate(15 830 200)"/>
+    <ellipse cx="960" cy="155" rx="7" ry="3.5" fill="#ffcce8" transform="rotate(-35 960 155)"/>
+    <ellipse cx="1070" cy="200" rx="5" ry="2.5" fill="#ffb8d9" transform="rotate(50 1070 200)"/>
+    <ellipse cx="1170" cy="165" rx="6" ry="3" fill="#ffd0ec" transform="rotate(-20 1170 165)"/>
+    <!-- Second layer -->
+    <ellipse cx="120" cy="300" rx="4" ry="2" fill="#ffb8d9" transform="rotate(35 120 300)" opacity="0.7"/>
+    <ellipse cx="330" cy="140" rx="5" ry="2.5" fill="#ffaad0" transform="rotate(-10 330 140)" opacity="0.8"/>
+    <ellipse cx="640" cy="240" rx="6" ry="3" fill="#ffc8e0" transform="rotate(25 640 240)" opacity="0.7"/>
+    <ellipse cx="1000" cy="270" rx="4" ry="2" fill="#ffb8d9" transform="rotate(-45 1000 270)" opacity="0.7"/>
+  </g>
+
+  <!-- Anime-style sparkles / stars -->
+  <g fill="#ffffa0" filter="url(#glow-pink)" opacity="0.9">
+    <!-- 4-pointed star shape at various positions -->
+    <polygon points="180,95 182,103 190,105 182,107 180,115 178,107 170,105 178,103" transform="scale(0.7) translate(-47,-42)"/>
+    <polygon points="720,80 723,91 734,94 723,97 720,108 717,97 706,94 717,91"/>
+    <polygon points="1020,100 1022,108 1030,110 1022,112 1020,120 1018,112 1010,110 1018,108" transform="scale(0.8) translate(-203,-10)"/>
+  </g>
+  <g fill="#c0e0ff" filter="url(#glow-blue)" opacity="0.9">
+    <polygon points="400,110 402,118 410,120 402,122 400,130 398,122 390,120 398,118" transform="scale(0.6) translate(-65,-46)"/>
+    <polygon points="900,85 902,93 910,95 902,97 900,105 898,97 890,95 898,93" transform="scale(0.75) translate(-77,-19)"/>
+  </g>
+
+  <!-- Main neon text glow bars on buildings -->
+  <!-- Large 서면 sign center building -->
+  <rect x="493" y="340" width="124" height="38" rx="5" fill="#6600cc" opacity="0.15" filter="url(#glow-soft)"/>
+  <text x="555" y="363" text-anchor="middle" font-size="16" font-weight="900" font-family="sans-serif" fill="url(#neon-purple)" filter="url(#glow-pink)">서면 서브컬처</text>
+
+  <!-- Anime character silhouette hints -->
+  <!-- Simple stylized anime girl silhouette left side, semi-transparent -->
+  <g opacity="0.12" fill="#b06fff">
+    <!-- head -->
+    <circle cx="200" cy="380" r="25"/>
+    <!-- hair -->
+    <ellipse cx="200" cy="368" rx="30" ry="20"/>
+    <rect x="174" y="368" width="8" height="50" rx="4"/>
+    <rect x="218" y="368" width="8" height="45" rx="4"/>
+    <!-- body -->
+    <rect x="185" y="402" width="30" height="55" rx="5"/>
+    <!-- dress -->
+    <polygon points="180,455 220,455 235,480 165,480"/>
+    <!-- arms -->
+    <rect x="160" y="405" width="25" height="8" rx="4" transform="rotate(-15 160 405)"/>
+    <rect x="215" y="405" width="25" height="8" rx="4" transform="rotate(15 215 405)"/>
+  </g>
+
+  <!-- Similar right side character -->
+  <g opacity="0.1" fill="#ff70b0">
+    <circle cx="1000" cy="375" r="22"/>
+    <ellipse cx="1000" cy="363" rx="28" ry="18"/>
+    <rect x="976" y="363" width="7" height="48" rx="3.5"/>
+    <rect x="1017" y="363" width="7" height="42" rx="3.5"/>
+    <rect x="986" y="395" width="28" height="52" rx="5"/>
+    <polygon points="980,445 1020,445 1032,475 968,475"/>
+    <rect x="962" y="398" width="24" height="7" rx="3.5" transform="rotate(-12 962 398)"/>
+    <rect x="1014" y="398" width="24" height="7" rx="3.5" transform="rotate(12 1014 398)"/>
+  </g>
+
+  <!-- Overall atmosphere gradient overlay top-bottom -->
+  <rect width="1200" height="480" fill="url(#sky)" opacity="0.15"/>
+  <!-- Purple-pink mist at bottom -->
+  <rect x="0" y="400" width="1200" height="80" fill="#2d0060" opacity="0.3"/>
+
+  <!-- Horizontal neon glow line (street level) -->
+  <line x1="0" y1="460" x2="1200" y2="460" stroke="#6622ff" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="460" x2="1200" y2="460" stroke="#ff22aa" stroke-width="0.5" opacity="0.2"/>
+</svg>
