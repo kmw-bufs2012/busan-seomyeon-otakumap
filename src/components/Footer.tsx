@@ -14,7 +14,7 @@ export function Footer() {
           </div>
           <p className="text-sm text-white/70 mb-4">{t("brand")}</p>
           <p className="text-xs text-white/40 text-center mb-4">
-            © 2025 부산 서면 애니샵 맵. Made by RANA(sekkenkun123@gmail.com). All rights reserved.
+            © 2026 ANIBUS Made by RANA(sekkenkun123@gmail.com). All rights reserved.
           </p>
           <p className="text-xs text-white/50 leading-relaxed max-w-md">
             {t("footer_disclaimer")}
