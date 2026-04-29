@@ -24,7 +24,7 @@ const Index = () => {
           <a href="#" className="flex items-center gap-2 font-extrabold">
             <span className="text-2xl">🎌</span>
             <span className="hidden sm:inline">ANIBUS</span>
-            <span className="text-xs text-muted-foreground hidden md:inline">· 부산 서면 애니샵 맵</span>
+            <span className="text-xs text-muted-foreground hidden md:inline">· {t("brand_subtitle")}</span>
           </a>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />

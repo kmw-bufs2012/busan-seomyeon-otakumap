@@ -65,7 +65,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-xs text-white/40">
-        © 2026 ANIBUS · Busan, South Korea
+        © 2026 ANIBUS. Made by RANA(sekkenkun123@gmail.com). All rights reserved.
       </div>
     </footer>
   );
