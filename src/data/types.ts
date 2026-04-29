@@ -32,7 +32,7 @@ export interface Shop {
   addressEn?: string;
   hours: string;
   hoursEn?: string;
-  hoursNote?: string;
+  hoursNote?: LocalizedText;
   instagram?: string;
   twitter?: string;
   threads?: string;

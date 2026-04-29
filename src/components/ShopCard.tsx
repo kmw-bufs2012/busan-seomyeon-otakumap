@@ -3,6 +3,12 @@ import { Shop } from "@/data/types";
 import { CATEGORY_META } from "@/data/shops";
 import { useI18n } from "@/i18n/I18nProvider";
 import { isOpenNow } from "@/lib/openNow";
+import { localizeHours } from "@/lib/localizeHours";
+
+// Map raw building identifiers (kept in Korean as filter keys) to translation keys
+const BUILDING_TRANSLATION_KEYS: Record<string, string> = {
+  "삼정타워": "building_samjung",
+};
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -28,8 +34,17 @@ export function ShopCard({ shop }: { shop: Shop }) {
   // Show localised address/hours when available
   const displayAddress =
     (lang !== "ko" && shop.addressEn) ? shop.addressEn : shop.address;
-  const displayHours =
+  const rawHours =
     (lang !== "ko" && shop.hoursEn) ? shop.hoursEn : shop.hours;
+  const displayHours = localizeHours(rawHours, t, lang);
+  const displayHoursNote = shop.hoursNote
+    ? (shop.hoursNote[lang] ?? shop.hoursNote.ko)
+    : undefined;
+  const displayBuilding = shop.building
+    ? (BUILDING_TRANSLATION_KEYS[shop.building]
+        ? t(BUILDING_TRANSLATION_KEYS[shop.building])
+        : shop.building)
+    : undefined;
 
   const copy = async () => {
     await navigator.clipboard.writeText(shop.address);
@@ -87,8 +102,8 @@ export function ShopCard({ shop }: { shop: Shop }) {
             {shop.englishName && lang !== "en" && (
               <p className="text-xs text-muted-foreground mt-0.5">{shop.englishName}</p>
             )}
-            {shop.building && (
-              <p className="text-xs text-primary font-semibold mt-1">🏢 {shop.building}</p>
+            {displayBuilding && (
+              <p className="text-xs text-primary font-semibold mt-1">🏢 {displayBuilding}</p>
             )}
           </div>
           <Tooltip>
@@ -142,7 +157,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
             <TooltipContent className="max-w-xs">{displayAddress}</TooltipContent>
           </Tooltip>
           <p className="text-xs text-muted-foreground pl-6">
-            🕒 {displayHours} {shop.hoursNote && <span className="text-primary">· {shop.hoursNote}</span>}
+            🕒 {displayHours} {displayHoursNote && <span className="text-primary">· {displayHoursNote}</span>}
           </p>
         </div>
 

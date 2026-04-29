@@ -264,7 +264,15 @@ export const SHOPS: Shop[] = [
     // (or "The Goods Busan Seomyeon Store") via Naver Maps, Kakao Maps, and SNS (X, Instagram).
     hours: "",
     hoursEn: "",
-    hoursNote: "네이버지도·카카오맵·SNS(X·인스타그램)에서 영업시간 확인 요망",
+    hoursNote: {
+      ko: "네이버지도·카카오맵·SNS(X·인스타그램)에서 영업시간 확인 요망",
+      en: "Please check Naver Map, Kakao Map, or SNS (X / Instagram) for business hours.",
+      ja: "Naver地図・カカオマップ・SNS（X・Instagram）で営業時間をご確認ください。",
+      "zh-tw": "請於 Naver 地圖、Kakao 地圖、SNS（X、Instagram）確認營業時間。",
+      "zh-cn": "请于 Naver 地图、Kakao 地图、SNS（X、Instagram）查看营业时间。",
+      vi: "Vui lòng kiểm tra giờ hoạt động trên Naver Map, Kakao Map hoặc SNS (X / Instagram).",
+      th: "กรุณาตรวจสอบเวลาทำการที่ Naver Map, Kakao Map หรือ SNS (X / Instagram)",
+    },
     instagram: "omochaland_busan",
     naverMap: naver("오모차랜드 서면"),
     kakaoMap: kakao("오모차랜드 부산"),

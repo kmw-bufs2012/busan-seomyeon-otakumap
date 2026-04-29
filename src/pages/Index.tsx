@@ -1,5 +1,6 @@
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { MapButton } from "@/components/MapButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ShopsTab } from "@/components/ShopsTab";
@@ -27,6 +28,7 @@ const Index = () => {
             <span className="text-xs text-muted-foreground hidden md:inline">· {t("brand_subtitle")}</span>
           </a>
           <div className="flex items-center gap-2">
+            <MapButton />
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
