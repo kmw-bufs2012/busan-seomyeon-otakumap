@@ -14,9 +14,9 @@ type Dict = Record<string, string>;
 
 export const TRANSLATIONS: Record<Lang, Dict> = {
   ko: {
-    brand: "ANIBUS · 부산 애니맵",
-    hero_title: "오타쿠의 모든 것",
-    hero_sub: "애니메이션 굿즈·피규어·가챠·테마 카페 — 7개 언어로 안내하는 부산 최고의 애니맵.",
+    brand: "ANIBUS · 부산 애니샵 맵",
+    hero_title: "부산 서면 애니샵 안내",
+    hero_sub: "애니메이션 굿즈·피규어·가챠·테마 카페 — 7개 언어로 안내하는 부산 최고의 애니샵 맵.",
     tab_shops: "🛍 애니·굿즈 매장",
     tab_cafes: "☕ 테마 카페",
     tab_routes: "🗺 추천 코스",
@@ -181,7 +181,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
   "zh-tw": {
     brand: "ANIBUS · 釜山動漫地圖",
     hero_title: "御宅族的一切",
-    hero_sub: "動漫周邊・模型・扭蛋・主題咖啡館 — 七語對應的最完整地圖。",
+    hero_sub: "動漫周邊・模型・扭蛋・主題咖啡�� — 七語對應的最完整地圖。",
     tab_shops: "🛍 商店與周邊",
     tab_cafes: "☕ 主題咖啡",
     tab_routes: "🗺 精選路線",
@@ -374,7 +374,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     verified: "ยืนยันแล้ว",
     partial: "ยืนยันบางส่ว���",
     unverified: "ยังไม่ย���นยันที่อยู่",
-    warning_cafe_title: "⚠️ แจ้งเรื่องราคา",
+    warning_cafe_title: "⚠️ แจ้งเรื่องรา��า",
     warning_cafe_price: "คาเฟ่ธีมมีราคาสูงกว่าคาเฟ่ทั่วไปพอสมควร กรุณาตรวจสอบเมนูก่อนเข้าร้าน",
     menu_price_note: "※ ราคาเมนูอาจมีการเปลี่ยนแปลง ดูราคาล่าสุดได้ที่ Naver Map",
     menu_highlights: "เมนูแนะนำ",
