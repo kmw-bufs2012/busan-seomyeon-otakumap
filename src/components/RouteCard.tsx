@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Route } from "@/data/types";
 import { SHOPS } from "@/data/shops";
 import { useI18n } from "@/i18n/I18nProvider";
+import { localizeHours } from "@/lib/localizeHours";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
@@ -25,9 +26,13 @@ export function RouteCard({ route }: { route: Route }) {
         {isEmpty ? (
           <div className="flex-1 flex items-center justify-center min-h-32 rounded-xl border-2 border-dashed border-border bg-muted/30 px-4 py-6 text-center">
             <p className="text-xs text-muted-foreground leading-relaxed break-keep">
-              코스 정보를 준비 중입니다.
-              <br />
-              (Course details coming soon.)
+              {t("route_coming_soon")}
+              {t("route_coming_soon_sub") && (
+                <>
+                  <br />
+                  {t("route_coming_soon_sub")}
+                </>
+              )}
             </p>
           </div>
         ) : (
@@ -76,6 +81,11 @@ export function RouteCard({ route }: { route: Route }) {
               {route.stops.map((id, i) => {
                 const shop = SHOPS.find((s) => s.id === id);
                 if (!shop) return null;
+                const stopAddress =
+                  lang !== "ko" && shop.addressEn ? shop.addressEn : shop.address;
+                const stopRawHours =
+                  lang !== "ko" && shop.hoursEn ? shop.hoursEn : shop.hours;
+                const stopHours = localizeHours(stopRawHours, t, lang);
                 return (
                   <li key={id} className="flex gap-3 items-start p-3 rounded-xl border border-border bg-muted/30">
                     <span className="flex h-7 w-7 items-center justify-center rounded-full gradient-hero text-white font-bold text-sm flex-shrink-0">
@@ -83,8 +93,8 @@ export function RouteCard({ route }: { route: Route }) {
                     </span>
                     <div className="min-w-0 flex-1">
                       <p className="font-bold">{shop.name[lang] ?? shop.name.ko}</p>
-                      <p className="text-xs text-muted-foreground">{shop.address}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">🕒 {shop.hours}</p>
+                      <p className="text-xs text-muted-foreground">{stopAddress}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">🕒 {stopHours}</p>
                     </div>
                     <a href={shop.naverMap} target="_blank" rel="noopener noreferrer" className="text-xs text-primary font-semibold whitespace-nowrap">
                       🗺

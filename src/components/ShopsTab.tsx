@@ -18,7 +18,7 @@ export function ShopsTab() {
 
   const filters: { key: FilterKey; label: string }[] = [
     { key: "all", label: t("filter_all") },
-    { key: "samjung", label: "🏢 삼정타워" },
+    { key: "samjung", label: `🏢 ${t("building_samjung")}` },
     { key: "anime", label: CATEGORY_META.anime[lang as "ko"] },
     { key: "figure", label: CATEGORY_META.figure[lang as "ko"] },
     { key: "gacha", label: CATEGORY_META.gacha[lang as "ko"] },
