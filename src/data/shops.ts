@@ -518,7 +518,7 @@ export const CAFES: Cafe[] = [
       ko: "메뉴 가격이 일반 카페보다 상대적으로 비쌉니다. 최신 가격은 네이버 지도를 참고하세요.",
       en: "Menu prices are relatively higher than regular cafés. Check Naver Map for the latest prices.",
       ja: "メニューは通常のカフェより比較的高額です。最新価格はNaver地図でご確認ください。",
-      "zh-tw": "菜單價格比一般咖啡館相對較貴。最新價格請參考 Naver 地圖。",
+      "zh-tw": "菜��價格比一般咖啡館相對較貴。最新價格請參考 Naver 地圖。",
       "zh-cn": "菜单价格比一般咖啡馆相对较贵。最新价格请参考 Naver 地图。",
       vi: "Giá menu tương đối cao hơn quán bình thường. Xem Naver Map để biết giá mới nhất.",
       th: "ราคาเมนูสูงกว่าคาเฟ่ทั่วไปพอสมควร ดู Naver Map สำหรับราคาล่าสุด",
@@ -616,8 +616,9 @@ export const ROUTES: Route[] = [
       "zh-tw": "西面半日周邊巡禮", "zh-cn": "西面半日周边巡礼",
       vi: "Tour Hàng Hóa Nửa Ngày Seomyeon", th: "ทัวร์สินค้าครึ่งวัน ซอมยอน",
     },
-    stops: ["animate-busan", "one-figure", "j-goods", "omochaland", "anigeo", "anime-club"],
-    durationHours: 4, budgetMin: 30000, budgetMax: 100000, difficulty: "advanced",
+    // ⚠️ Course stops cleared — to be repopulated. Section title only for now.
+    stops: [],
+    durationHours: 0, budgetMin: 0, budgetMax: 0, difficulty: "advanced",
     colorClass: "from-cat-anime to-cat-figure",
   },
   {
@@ -628,8 +629,9 @@ export const ROUTES: Route[] = [
       "zh-tw": "扭蛋・抽選專門路線", "zh-cn": "扭蛋・抽奖专门路线",
       vi: "Chuyên Gia Gacha & Kuji", th: "เชี่ยวชาญกาชา & คูจิ",
     },
-    stops: ["kuji-land", "brother-young", "gacha-ocean", "gacha-shop-seomyeon"],
-    durationHours: 2, budgetMin: 20000, budgetMax: 50000, difficulty: "beginner",
+    // ⚠️ Course stops cleared — to be repopulated. Section title only for now.
+    stops: [],
+    durationHours: 0, budgetMin: 0, budgetMax: 0, difficulty: "beginner",
     colorClass: "from-cat-gacha to-cat-figure",
   },
 ];

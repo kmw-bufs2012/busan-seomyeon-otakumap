@@ -36,10 +36,10 @@ const Index = () => {
       {/* Hero */}
       <section className="relative overflow-hidden">
         {/* Hero background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero-otaku.jpg')" }}
-          aria-hidden="true"
+        <img
+          src="/images/seomyeon-otaku-street.jpg"
+          alt="서면 애니메이션 거리 - 덕후의 성지"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         {/* Single dark overlay for legibility — no purple/pink gradient covering stats */}
         <div
