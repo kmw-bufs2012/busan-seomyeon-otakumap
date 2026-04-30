@@ -108,6 +108,15 @@ const MapPage = () => {
         </div>
       </header>
 
+      {/* Construction warning banner — appears under the nav, above the map.
+          Bright red so users immediately understand coordinates may be inaccurate. */}
+      <div
+        role="alert"
+        className="w-full bg-red-600 px-4 py-3 text-center text-lg font-bold text-white shadow-md md:text-xl"
+      >
+        {t("map_warning")}
+      </div>
+
       {/* Main layout: PC = sidebar left + map right; mobile = map top + list bottom */}
       <main className="flex flex-1 flex-col md:flex-row">
         {/* List column (desktop sidebar / mobile bottom sheet) */}
