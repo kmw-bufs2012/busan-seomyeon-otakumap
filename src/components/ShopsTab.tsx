@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { SHOPS, CATEGORY_META, ROUTES } from "@/data/shops";
 import { Category } from "@/data/types";
 import { useI18n } from "@/i18n/I18nProvider";
+import { TRANSLATIONS, LANGS } from "@/i18n/translations";
 import { isOpenNow } from "@/lib/openNow";
 import { ShopCard } from "./ShopCard";
 import { RouteCard } from "./RouteCard";
@@ -31,10 +32,49 @@ export function ShopsTab() {
   const filtered = useMemo(() => {
     return SHOPS.filter((s) => {
       if (search) {
-        const q = search.toLowerCase();
-        const matches = [s.name.ko, s.name.en, s.englishName, s.address]
-          .filter(Boolean).some((v) => v!.toLowerCase().includes(q));
-        if (!matches) return false;
+        const q = search.trim().toLowerCase();
+        if (q) {
+          const fields: string[] = [];
+
+          // 1) Shop name in every language
+          Object.values(s.name).forEach((v) => v && fields.push(v));
+
+          // 2) Address (ko + en romanization)
+          if (s.address) fields.push(s.address);
+          if (s.addressEn) fields.push(s.addressEn);
+          if (s.englishName) fields.push(s.englishName);
+
+          // 3) Building name (e.g. "삼정타워") + building name in all locales
+          if (s.building) {
+            fields.push(s.building);
+            LANGS.forEach(({ code }) => {
+              const v = TRANSLATIONS[code]?.["building_samjung"];
+              if (v) fields.push(v);
+            });
+          }
+
+          // 4) Category label in every language
+          const catMeta = CATEGORY_META[s.category];
+          if (catMeta) {
+            LANGS.forEach(({ code }) => {
+              const v = (catMeta as Record<string, string>)[code];
+              if (v) fields.push(v);
+            });
+          }
+
+          // 5) Tags — translation keys → resolve in every language
+          s.tags.forEach((tag) => {
+            // Always include the raw key/value (covers brand-name tags like "LABUBU")
+            fields.push(tag);
+            LANGS.forEach(({ code }) => {
+              const v = TRANSLATIONS[code]?.[tag];
+              if (v) fields.push(v);
+            });
+          });
+
+          const matches = fields.some((f) => f.toLowerCase().includes(q));
+          if (!matches) return false;
+        }
       }
       switch (filter) {
         case "all": return true;
