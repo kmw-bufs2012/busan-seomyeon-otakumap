@@ -12,7 +12,7 @@ const BUILDING_TRANSLATION_KEYS: Record<string, string> = {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { Copy, Check, Instagram, MapPin, Share2, ExternalLink, Twitter } from "lucide-react";
+import { Copy, Check, Instagram, MapPin, Share2, ExternalLink, Twitter, Phone, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const langDots: { key: "en" | "ja" | "zh"; bg: string; label: string }[] = [
@@ -159,12 +159,24 @@ export function ShopCard({ shop }: { shop: Shop }) {
           <p className="text-xs text-muted-foreground pl-6">
             🕒 {displayHours} {displayHoursNote && <span className="text-primary">· {displayHoursNote}</span>}
           </p>
+          {shop.phone && (
+            <p className="text-xs text-muted-foreground pl-6">
+              <a href={`tel:${shop.phone.replace(/[^0-9+]/g, "")}`} className="hover:text-primary inline-flex items-center gap-1">
+                <Phone className="h-3 w-3" /> {shop.phone}
+              </a>
+            </p>
+          )}
+          {shop.contactNote && (
+            <p className="text-xs text-primary pl-6 italic">
+              · {shop.contactNote[lang] ?? shop.contactNote.ko}
+            </p>
+          )}
         </div>
 
         {/* tags */}
         <div className="flex flex-wrap gap-1">
           {shop.tags.slice(0, 3).map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-[10px] font-medium">{tag}</Badge>
+            <Badge key={tag} variant="secondary" className="text-[10px] font-medium">{t(tag)}</Badge>
           ))}
           {shop.tags.length > 3 && (
             <Badge variant="outline" className="text-[10px]">+{shop.tags.length - 3}</Badge>
@@ -224,7 +236,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
         )}
         {!shop.kakaoMap && (
           <Button asChild size="sm" variant="outline" className="text-xs h-9">
-            <a href={`https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
+            <a href={shop.googleMap ?? `https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-3.5 w-3.5 mr-1" /> Google
             </a>
           </Button>
@@ -243,9 +255,16 @@ export function ShopCard({ shop }: { shop: Shop }) {
             </a>
           </Button>
         )}
+        {shop.homepage && (
+          <Button asChild size="sm" variant="outline" className="text-xs h-9">
+            <a href={shop.homepage} target="_blank" rel="noopener noreferrer">
+              <Globe className="h-3.5 w-3.5 mr-1" /> {t("homepage_label")}
+            </a>
+          </Button>
+        )}
         {shop.kakaoMap && (
           <Button asChild size="sm" variant="outline" className="text-xs h-9">
-            <a href={`https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
+            <a href={shop.googleMap ?? `https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-3.5 w-3.5 mr-1" /> Google
             </a>
           </Button>

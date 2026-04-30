@@ -38,6 +38,10 @@ export interface Shop {
   threads?: string;
   naverMap?: string;
   kakaoMap?: string;
+  googleMap?: string;
+  homepage?: string;
+  phone?: string;
+  contactNote?: LocalizedText;
   image?: string;
   tags: string[];
   taxFree?: boolean;
