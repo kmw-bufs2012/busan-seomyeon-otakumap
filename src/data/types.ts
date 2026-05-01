@@ -49,6 +49,7 @@ export interface Shop {
   languages?: ("en" | "ja" | "zh")[];
   status: VerifyStatus;
   notes?: LocalizedText;
+  badge?: LocalizedText;
 }
 
 export interface CafeMenuItem {

@@ -30,25 +30,31 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   // ── 중앙대로680번길 / 인근 ──
   "brother-seomyeon":   { lat: 35.1535845, lng: 129.0593794 }, // [GMaps]
   "anime-club":         { lat: 35.1536447, lng: 129.0595202 }, // [GMaps]
-  "omochaland":         { lat: 35.1538200, lng: 129.0599200 },
-  "anigeo":             { lat: 35.1539200, lng: 129.0598500 },
+  "omochaland":         { lat: 35.1537421, lng: 129.0616167 }, // [GMaps] 45-5 2F
+  "anigeo":             { lat: 35.1535545, lng: 129.0604552 }, // [GMaps]
   "anime-ocean":        { lat: 35.1542000, lng: 129.0590000 },
   "ani-on":             { lat: 35.1540500, lng: 129.0598000 },
-  "figure-warehouse":   { lat: 35.1538800, lng: 129.0599400 },
-  "kuji-ya":            { lat: 35.1538200, lng: 129.0599200 },
+  // 45-9 (figure-warehouse) shares the same street block as 45-5 (omochaland/kuji-ya)
+  "figure-warehouse":   { lat: 35.1537800, lng: 129.0617000 },
+  // 45-5 1F — same building as omochaland (45-5 2F)
+  "kuji-ya":            { lat: 35.1537421, lng: 129.0616167 },
 
   // ── 외곽 서면 / 전포 ──
   "ouji-otaku":             { lat: 35.1556000, lng: 129.0593000 },
-  "the-goods":              { lat: 35.1505000, lng: 129.0623000 },
+  // 전포대로209번길 39 2F — Jeonpo area (estimate near Jeonpo Stn.)
+  "the-goods":              { lat: 35.1497000, lng: 129.0631000 },
   "kodawari":               { lat: 35.1556000, lng: 129.0610000 },
   "kuji-land":              { lat: 35.1525000, lng: 129.0591000 },
-  "kuji-shop":              { lat: 35.1500000, lng: 129.0640000 },
+  // 동천로108번길 6 304호 — 부산진구 동천 인근 (estimate)
+  "kuji-shop":              { lat: 35.1525000, lng: 129.0628000 },
   "gacha-shop-seomyeon":    { lat: 35.1554000, lng: 129.0593000 },
 };
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
-  "dream-maid": { lat: 35.1505000, lng: 129.0633000 },
-  "maid-moon":  { lat: 35.1537000, lng: 129.0600000 },
+  // 중앙대로692번길 46 B1 — 전포역 7번 출구 인근 (estimate)
+  "dream-maid": { lat: 35.1543000, lng: 129.0612000 },
+  // 중앙대로692번길 21 2층 (updated address) — same street as dream-maid
+  "maid-moon":  { lat: 35.1545000, lng: 129.0610000 },
 };
 
 /** Seomyeon district center used as the default map center. */
