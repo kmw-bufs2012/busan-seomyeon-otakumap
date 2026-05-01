@@ -115,7 +115,7 @@ function buildInfoWindowHtml(
       ${phone}
       ${tagsHtml ? `<div style="margin-top:6px;">${tagsHtml}</div>` : ""}
       ${socialHtml}
-      <a href="/#place-${escapeHtml(place.id)}" style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;text-decoration:none;">
+      <a href="#" data-anibus-detail="${escapeHtml(place.id)}" style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;text-decoration:none;cursor:pointer;">
         ${detailLabel} →
       </a>
     </div>
@@ -192,7 +192,25 @@ export function NaverMapView({ places, activeId, onMarkerClick }: NaverMapViewPr
       pixelOffset: new naver.Point(0, -8),
     });
 
+    // InfoWindow content is plain HTML, so we use event delegation on the
+    // map container to intercept clicks on the "View details" link and
+    // call the React-installed window bridge instead of navigating.
+    const container = containerRef.current;
+    const onContainerClick = (ev: MouseEvent) => {
+      const target = ev.target as HTMLElement | null;
+      const link = target?.closest<HTMLElement>("[data-anibus-detail]");
+      if (!link) return;
+      ev.preventDefault();
+      const id = link.getAttribute("data-anibus-detail");
+      if (!id) return;
+      const bridge = (window as unknown as { __anibusOpenDetail?: (id: string) => void })
+        .__anibusOpenDetail;
+      if (bridge) bridge(id);
+    };
+    container.addEventListener("click", onContainerClick);
+
     return () => {
+      container.removeEventListener("click", onContainerClick);
       // Clear listeners
       listenersRef.current.forEach((l) => naver.Event.removeListener(l));
       listenersRef.current = [];

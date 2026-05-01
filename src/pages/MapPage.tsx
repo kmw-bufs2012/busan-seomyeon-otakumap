@@ -10,6 +10,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { MapFilterBar, type MapFilter } from "@/components/map/MapFilterBar";
 import { MapPlaceCard, type Place } from "@/components/map/MapPlaceCard";
 import { NaverMapView } from "@/components/map/NaverMapView";
+import { PlaceDetailModal } from "@/components/map/PlaceDetailModal";
 import { useNaverMapsLoader } from "@/components/map/useNaverMapsLoader";
 
 /** Decide which filter bucket a place falls under. */
@@ -41,6 +42,9 @@ const MapPage = () => {
   const { state: loaderState, error: loaderError } = useNaverMapsLoader();
   const [filter, setFilter] = useState<MapFilter>("all");
   const [activeId, setActiveId] = useState<string | null>(null);
+  // ID of the place whose detail modal is currently open. Independent of
+  // `activeId` so users can pan to a marker without forcing the modal open.
+  const [detailId, setDetailId] = useState<string | null>(null);
 
   // Update the document title for SEO/UX.
   useEffect(() => {
@@ -50,6 +54,18 @@ const MapPage = () => {
       document.title = original;
     };
   }, [t]);
+
+  // Bridge — exposed to the Naver-Map InfoWindow which is rendered as plain
+  // HTML and therefore cannot reach React state directly. The InfoWindow's
+  // "View details" link calls `window.__anibusOpenDetail('<place-id>')`.
+  useEffect(() => {
+    (window as unknown as { __anibusOpenDetail?: (id: string) => void })
+      .__anibusOpenDetail = (id: string) => setDetailId(id);
+    return () => {
+      delete (window as unknown as { __anibusOpenDetail?: (id: string) => void })
+        .__anibusOpenDetail;
+    };
+  }, []);
 
   const allPlaces = useMemo(() => buildPlaces(), []);
   const counts = useMemo<Record<MapFilter, number>>(() => {
@@ -138,6 +154,7 @@ const MapPage = () => {
                     place={place}
                     active={activeId === place.id}
                     onClick={() => setActiveId(place.id)}
+                    onDetail={() => setDetailId(place.id)}
                   />
                 </li>
               ))}
@@ -169,6 +186,16 @@ const MapPage = () => {
           </div>
         </section>
       </main>
+
+      {/* Detail modal — opens via card "View details" button or InfoWindow link */}
+      <PlaceDetailModal
+        place={
+          detailId
+            ? allPlaces.find(({ place }) => place.id === detailId)?.place ?? null
+            : null
+        }
+        onClose={() => setDetailId(null)}
+      />
     </div>
   );
 };
