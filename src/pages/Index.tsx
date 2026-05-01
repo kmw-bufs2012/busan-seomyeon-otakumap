@@ -66,9 +66,10 @@ const Index = () => {
             </p>
 
             {/* Stats — solid white text on subtle dark glass, no gradient overlay */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 max-w-3xl">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-10 max-w-4xl">
               {[
                 { n: SHOPS.length, l: t("stats_shops") },
+                { n: 2, l: t("stats_cafes") },
                 { n: 7, l: t("stats_languages") },
                 { n: "🏙", l: t("stats_area") },
                 { n: "🔄", l: t("stats_update") },
