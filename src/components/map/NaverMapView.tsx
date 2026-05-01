@@ -115,9 +115,12 @@ function buildInfoWindowHtml(
       ${phone}
       ${tagsHtml ? `<div style="margin-top:6px;">${tagsHtml}</div>` : ""}
       ${socialHtml}
-      <span role="button" tabindex="0" data-anibus-detail="${escapeHtml(place.id)}" style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;text-decoration:none;cursor:pointer;user-select:none;">
+      <button
+        type="button"
+        onclick="(function(e){e.preventDefault();e.stopPropagation();var b=window.__anibusOpenDetail;if(b)b('${escapeHtml(place.id)}');})(event)"
+        style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;border:none;cursor:pointer;user-select:none;outline:none;">
         ${detailLabel} →
-      </span>
+      </button>
     </div>
   `;
 }
@@ -220,12 +223,14 @@ export function NaverMapView({ places, activeId, onMarkerClick }: NaverMapViewPr
         .__anibusOpenDetail;
       if (bridge) bridge(id);
     };
-    document.addEventListener("click", onDocClick);
-    document.addEventListener("keydown", onDocKey);
+    // capture:true so we intercept the event before any stopPropagation
+    // lower in the tree (e.g. Naver SDK internal handlers) can swallow it.
+    document.addEventListener("click", onDocClick, true);
+    document.addEventListener("keydown", onDocKey, true);
 
     return () => {
-      document.removeEventListener("click", onDocClick);
-      document.removeEventListener("keydown", onDocKey);
+      document.removeEventListener("click", onDocClick, true);
+      document.removeEventListener("keydown", onDocKey, true);
       // Clear listeners
       listenersRef.current.forEach((l) => naver.Event.removeListener(l));
       listenersRef.current = [];
