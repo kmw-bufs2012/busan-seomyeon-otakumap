@@ -33,21 +33,21 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "omochaland":         { lat: 35.1537421, lng: 129.0616167 }, // [GMaps] 45-5 2F
   "anigeo":             { lat: 35.1535545, lng: 129.0604552 }, // [GMaps]
   "anime-ocean":        { lat: 35.155034, lng: 129.059477 }, // verified by user via Naver Map
-  "ani-on":             { lat: 35.154720, lng: 129.060215 }, // verified by user via Naver Map
-  // 중앙대로680번길 45-9 — verified by user via Naver Map
-  "figure-warehouse":   { lat: 35.153889, lng: 129.061628 },
-  // 중앙대로680번길 45-5 — verified by user via Naver Map
-  "kuji-ya":            { lat: 35.153911, lng: 129.061518 },
+  "ani-on":             { lat: 35.153926, lng: 129.061481 }, // verified by user via Google Maps
+  // 중앙대로680번길 45-9 — verified by user via Google Maps
+  "figure-warehouse":   { lat: 35.153894, lng: 129.061630 },
+  // 중앙대로680번길 45-5 — verified by user via Google Maps
+  "kuji-ya":            { lat: 35.153782, lng: 129.061633 },
 
   // ── 외곽 서면 / 전포 ──
   "ouji-otaku":             { lat: 35.157007, lng: 129.057543 }, // verified by user via Naver Map
-  // 전포대로209번길 39 — verified by user via Naver Map
-  "the-goods":              { lat: 35.154715, lng: 129.063352 },
-  "kodawari":               { lat: 35.155525, lng: 129.059169 }, // verified by user via Naver Map
-  "kuji-land":              { lat: 35.151904, lng: 129.062158 }, // verified by user via Naver Map
+  // 전포대로209번길 39 — verified by user via Google Maps
+  "the-goods":              { lat: 35.155332, lng: 129.063092 },
+  "kodawari":               { lat: 35.154719, lng: 129.059953 }, // verified by user via Google Maps
+  "kuji-land":              { lat: 35.151462, lng: 129.061107 }, // verified by user via Google Maps
   // 동천로108번길 6 — verified by user via Naver Map
   "kuji-shop":              { lat: 35.158910, lng: 129.063995 },
-  "gacha-shop-seomyeon":    { lat: 35.155923, lng: 129.058731 }, // verified by user via Naver Map
+  "gacha-shop-seomyeon":    { lat: 35.155445, lng: 129.060450 }, // verified by user via Google Maps
 };
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {

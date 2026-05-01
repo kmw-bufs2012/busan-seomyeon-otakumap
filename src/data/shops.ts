@@ -462,15 +462,15 @@ export const SHOPS: Shop[] = [
 
   // ── 쿠지/복권 ──
   {
-    id: "kuji-land",
-    name: {
-      ko: "쿠지랜드", en: "Kuji Land", ja: "くじランド",
-      "zh-tw": "Kuji Land", "zh-cn": "Kuji Land",
-      vi: "Kuji Land", th: "คูจิแลนด์",
-    },
-    category: "gacha",
-    address: "부산광역시 부산진구 중앙대로666번길 50",
-    addressEn: "50, Jungang-daero 666beon-gil, Busanjin-gu, Busan",
+  id: "kuji-land",
+  name: {
+  ko: "쿠지랜드", en: "Kuji Land", ja: "くじランド",
+  "zh-tw": "Kuji Land", "zh-cn": "Kuji Land",
+  vi: "Kuji Land", th: "คูจิแลนด์",
+  },
+  category: "gacha",
+  address: "부산광역시 부산진구 중앙대로666번길 50 서면더샵센트럴스타 상가 지하2층 203호",
+  addressEn: "B2F, #203, Seomyeon The Sharp Central Star, 50, Jungang-daero 666beon-gil, Busanjin-gu, Busan",
     hours: "화·수·목·금 14:00–20:00 / 토·일 12:00–21:00 (월 휴무)",
     hoursEn: "Tue–Fri 14:00–20:00 / Sat–Sun 12:00–21:00 (Closed Mon)",
     instagram: "kujiland_busan",
@@ -589,7 +589,7 @@ export const CAFES: Cafe[] = [
   {
     id: "maid-moon",
     name: {
-      ko: "메이드문 메이드카페 서면점", en: "Maid Moon Seomyeon", ja: "メイドムーン西面店",
+      ko: "메이드문 메이드카페 서면점", en: "Maid Moon Seomyeon", ja: "メイ��ムーン西面店",
       "zh-tw": "Maid Moon 西面", "zh-cn": "Maid Moon 西面",
       vi: "Maid Moon Seomyeon", th: "เมดมูน ซอมยอน",
     },
