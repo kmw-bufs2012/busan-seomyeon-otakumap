@@ -22,7 +22,7 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "smg-goods":          { lat: 35.1529425, lng: 129.0595638 },
 
   // ── 신천대로50번길 ──
-  "j-goods":            { lat: 35.1537300, lng: 129.0599800 },
+  "j-goods":            { lat: 35.153675, lng: 129.059841 }, // verified by user via Naver Map
   "one-figure":         { lat: 35.1536592, lng: 129.0600483 }, // [GMaps]
   "gacha-ocean":        { lat: 35.1538864, lng: 129.0600382 }, // [GMaps]
   "brother-young":      { lat: 35.1535431, lng: 129.0600532 }, // [GMaps]
@@ -32,22 +32,22 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "anime-club":         { lat: 35.1536447, lng: 129.0595202 }, // [GMaps]
   "omochaland":         { lat: 35.1537421, lng: 129.0616167 }, // [GMaps] 45-5 2F
   "anigeo":             { lat: 35.1535545, lng: 129.0604552 }, // [GMaps]
-  "anime-ocean":        { lat: 35.1542000, lng: 129.0590000 },
-  "ani-on":             { lat: 35.1540500, lng: 129.0598000 },
-  // 45-9 (figure-warehouse) shares the same street block as 45-5 (omochaland/kuji-ya)
-  "figure-warehouse":   { lat: 35.1537800, lng: 129.0617000 },
-  // 45-5 1F — same building as omochaland (45-5 2F)
-  "kuji-ya":            { lat: 35.1537421, lng: 129.0616167 },
+  "anime-ocean":        { lat: 35.155034, lng: 129.059477 }, // verified by user via Naver Map
+  "ani-on":             { lat: 35.154720, lng: 129.060215 }, // verified by user via Naver Map
+  // 중앙대로680번길 45-9 — verified by user via Naver Map
+  "figure-warehouse":   { lat: 35.153889, lng: 129.061628 },
+  // 중앙대로680번길 45-5 — verified by user via Naver Map
+  "kuji-ya":            { lat: 35.153911, lng: 129.061518 },
 
   // ── 외곽 서면 / 전포 ──
-  "ouji-otaku":             { lat: 35.1556000, lng: 129.0593000 },
-  // 전포대로209번길 39 2F — Jeonpo area (estimate near Jeonpo Stn.)
-  "the-goods":              { lat: 35.1497000, lng: 129.0631000 },
-  "kodawari":               { lat: 35.1556000, lng: 129.0610000 },
-  "kuji-land":              { lat: 35.1525000, lng: 129.0591000 },
-  // 동천로108번길 6 304호 — 부산진구 동천 인근 (estimate)
-  "kuji-shop":              { lat: 35.1525000, lng: 129.0628000 },
-  "gacha-shop-seomyeon":    { lat: 35.1554000, lng: 129.0593000 },
+  "ouji-otaku":             { lat: 35.157007, lng: 129.057543 }, // verified by user via Naver Map
+  // 전포대로209번길 39 — verified by user via Naver Map
+  "the-goods":              { lat: 35.154715, lng: 129.063352 },
+  "kodawari":               { lat: 35.155525, lng: 129.059169 }, // verified by user via Naver Map
+  "kuji-land":              { lat: 35.151904, lng: 129.062158 }, // verified by user via Naver Map
+  // 동천로108번길 6 — verified by user via Naver Map
+  "kuji-shop":              { lat: 35.158910, lng: 129.063995 },
+  "gacha-shop-seomyeon":    { lat: 35.155923, lng: 129.058731 }, // verified by user via Naver Map
 };
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
