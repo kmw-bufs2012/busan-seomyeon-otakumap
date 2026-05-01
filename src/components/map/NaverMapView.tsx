@@ -115,9 +115,9 @@ function buildInfoWindowHtml(
       ${phone}
       ${tagsHtml ? `<div style="margin-top:6px;">${tagsHtml}</div>` : ""}
       ${socialHtml}
-      <a href="#" data-anibus-detail="${escapeHtml(place.id)}" style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;text-decoration:none;cursor:pointer;">
+      <span role="button" tabindex="0" data-anibus-detail="${escapeHtml(place.id)}" style="display:inline-block;margin-top:10px;padding:6px 12px;font-size:11px;font-weight:700;color:#fff;background:linear-gradient(135deg,#ec4899,#a855f7);border-radius:9999px;text-decoration:none;cursor:pointer;user-select:none;">
         ${detailLabel} →
-      </a>
+      </span>
     </div>
   `;
 }
@@ -192,25 +192,40 @@ export function NaverMapView({ places, activeId, onMarkerClick }: NaverMapViewPr
       pixelOffset: new naver.Point(0, -8),
     });
 
-    // InfoWindow content is plain HTML, so we use event delegation on the
-    // map container to intercept clicks on the "View details" link and
-    // call the React-installed window bridge instead of navigating.
-    const container = containerRef.current;
-    const onContainerClick = (ev: MouseEvent) => {
+    // InfoWindow content is plain HTML rendered by the Naver SDK, and the
+    // SDK can attach the InfoWindow DOM outside the map container in some
+    // versions. To guarantee delegation works, we listen on `document` and
+    // also handle keyboard activation (Enter / Space) for accessibility.
+    const onDocClick = (ev: MouseEvent) => {
       const target = ev.target as HTMLElement | null;
-      const link = target?.closest<HTMLElement>("[data-anibus-detail]");
-      if (!link) return;
+      const trigger = target?.closest<HTMLElement>("[data-anibus-detail]");
+      if (!trigger) return;
       ev.preventDefault();
-      const id = link.getAttribute("data-anibus-detail");
+      ev.stopPropagation();
+      const id = trigger.getAttribute("data-anibus-detail");
       if (!id) return;
       const bridge = (window as unknown as { __anibusOpenDetail?: (id: string) => void })
         .__anibusOpenDetail;
       if (bridge) bridge(id);
     };
-    container.addEventListener("click", onContainerClick);
+    const onDocKey = (ev: KeyboardEvent) => {
+      if (ev.key !== "Enter" && ev.key !== " ") return;
+      const target = ev.target as HTMLElement | null;
+      const trigger = target?.closest<HTMLElement>("[data-anibus-detail]");
+      if (!trigger) return;
+      ev.preventDefault();
+      const id = trigger.getAttribute("data-anibus-detail");
+      if (!id) return;
+      const bridge = (window as unknown as { __anibusOpenDetail?: (id: string) => void })
+        .__anibusOpenDetail;
+      if (bridge) bridge(id);
+    };
+    document.addEventListener("click", onDocClick);
+    document.addEventListener("keydown", onDocKey);
 
     return () => {
-      container.removeEventListener("click", onContainerClick);
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onDocKey);
       // Clear listeners
       listenersRef.current.forEach((l) => naver.Event.removeListener(l));
       listenersRef.current = [];

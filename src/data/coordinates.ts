@@ -45,8 +45,8 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "the-goods":              { lat: 35.155332, lng: 129.063092 },
   "kodawari":               { lat: 35.154719, lng: 129.059953 }, // verified by user via Google Maps
   "kuji-land":              { lat: 35.151462, lng: 129.061107 }, // verified by user via Google Maps
-  // 동천로108번길 6 — verified by user via Naver Map
-  "kuji-shop":              { lat: 35.158910, lng: 129.063995 },
+  // 동천로108번길 6 — verified by user via Google Maps
+  "kuji-shop":              { lat: 35.158235, lng: 129.062676 },
   "gacha-shop-seomyeon":    { lat: 35.155445, lng: 129.060450 }, // verified by user via Google Maps
 };
 
