@@ -24,6 +24,7 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   // ── 신천대로50번길 ──
   "j-goods":            { lat: 35.153675, lng: 129.059841 }, // verified by user via Naver Map
   "one-figure":         { lat: 35.1536592, lng: 129.0600483 }, // [GMaps]
+  "one-figure-2":       { lat: 35.1542033, lng: 129.0600499 }, // verified by user
   "gacha-ocean":        { lat: 35.1538864, lng: 129.0600382 }, // [GMaps]
   "brother-young":      { lat: 35.1535431, lng: 129.0600532 }, // [GMaps]
 
