@@ -16,7 +16,7 @@ export function Footer() {
           <p className="text-xs text-white/40 text-center mb-4">
             © 2026 ANIBUS Made by RANA(sekkenkun123@gmail.com). All rights reserved.
           </p>
-          <p className="text-xs text-white/50 leading-relaxed max-w-md">
+          <p className="text-xs text-white/50 leading-relaxed max-w-md whitespace-pre-line">
             {t("footer_disclaimer")}
           </p>
           <div className="flex gap-3 mt-4">
@@ -47,7 +47,7 @@ export function Footer() {
 
           <p className="font-bold text-sm mt-6 mb-2 uppercase tracking-wider text-white/90">Stats</p>
           <ul className="text-xs text-white/70 space-y-1">
-            <li>23 {t("stats_shops")}</li>
+            <li>24 {t("stats_shops")}</li>
             <li>2 {t("tab_cafes").replace(/^☕\s*/, "")}</li>
             <li>7 {t("stats_languages")}</li>
             <li>{t("stats_update")}</li>
