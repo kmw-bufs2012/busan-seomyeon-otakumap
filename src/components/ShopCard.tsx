@@ -243,7 +243,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
             </a>
           </Button>
         )}
-        {!shop.kakaoMap && (
+        {!shop.kakaoMap && !shop.hideGoogleMap && (
           <Button asChild size="sm" variant="outline" className="text-xs h-9">
             <a href={shop.googleMap ?? `https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-3.5 w-3.5 mr-1" /> Google
@@ -271,7 +271,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
             </a>
           </Button>
         )}
-        {shop.kakaoMap && (
+        {shop.kakaoMap && !shop.hideGoogleMap && (
           <Button asChild size="sm" variant="outline" className="text-xs h-9">
             <a href={shop.googleMap ?? `https://www.google.com/maps/search/${encodeURIComponent(shop.address)}`} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-3.5 w-3.5 mr-1" /> Google

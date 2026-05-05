@@ -234,9 +234,9 @@ function PlaceDetailContent({ place }: { place: Place }) {
           )}
 
           {notes && (
-            <div className="rounded-lg border border-border bg-muted/40 px-3 py-2.5 text-sm text-muted-foreground leading-relaxed flex items-center gap-2">
-              <span className="text-base" aria-hidden="true">📋</span>
-              <span>{notes}</span>
+            <div className="rounded-lg border border-border bg-muted/40 px-3 py-2.5 text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+              <span className="text-base mt-0.5 flex-shrink-0" aria-hidden="true">📋</span>
+              <span className="whitespace-pre-line">{notes}</span>
             </div>
           )}
         </div>

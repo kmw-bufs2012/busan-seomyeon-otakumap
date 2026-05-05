@@ -39,6 +39,8 @@ export interface Shop {
   naverMap?: string;
   kakaoMap?: string;
   googleMap?: string;
+  /** When true, hide the Google Maps button entirely (no fallback search). */
+  hideGoogleMap?: boolean;
   homepage?: string;
   phone?: string;
   contactNote?: LocalizedText;

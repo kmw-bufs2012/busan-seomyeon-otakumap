@@ -49,6 +49,10 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   // 동천로108번길 6 — verified by user via Google Maps
   "kuji-shop":              { lat: 35.158235, lng: 129.062676 },
   "gacha-shop-seomyeon":    { lat: 35.155445, lng: 129.060450 }, // verified by user via Google Maps
+
+  // ── 신규 점포 ──
+  // 중앙대로692번길 42 2층 — provided by user
+  "oku-shop":               { lat: 35.154297, lng: 129.061579 },
 };
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
