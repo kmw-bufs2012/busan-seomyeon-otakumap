@@ -488,7 +488,7 @@ export const SHOPS: Shop[] = [
     badge: {
       ko: "⭐ 애니와 함께 걸어온 오타쿠 사장이 차린 가게",
       en: "⭐ Founded by an Otaku owner who has lived alongside anime",
-      ja: "⭐ アニメと共に歩んできたオタク店主のお店",
+      ja: "⭐ アニメ��共に歩んできたオタク店主のお店",
       "zh-tw": "⭐ 由與動漫一同走來的御宅族店主開設的店鋪",
       "zh-cn": "⭐ 由与动漫一同走来的御宅族店主开设的店铺",
       vi: "⭐ Cửa hàng do chủ otaku đã đồng hành cùng anime mở ra",
@@ -730,15 +730,15 @@ export const CAFES: Cafe[] = [
   {
     id: "maid-moon",
     name: {
-      ko: "메이드�� 메이드카페 서면점", en: "Maid Moon Seomyeon", ja: "メイ��ムーン西面店",
-      "zh-tw": "Maid Moon 西面", "zh-cn": "Maid Moon 西面",
-      vi: "Maid Moon Seomyeon", th: "เมดมูน ซอมยอน",
+      ko: "메이드문 메이드카페", en: "Maid Moon Maid Café", ja: "メイドムーン メイドカフェ",
+      "zh-tw": "Maid Moon 女僕咖啡廳", "zh-cn": "Maid Moon 女仆咖啡厅",
+      vi: "Maid Moon Maid Café", th: "Maid Moon Maid Café",
     },
     category: "maid",
     address: "부산광역시 부산진구 중앙대로692번길 21 2층",
     addressEn: "2F, 21, Jungang-daero 692beon-gil, Busanjin-gu, Busan",
-    hours: "매일 14:00–21:00, 연중무휴",
-    hoursEn: "Daily 14:00–21:00 (Open year-round)",
+    hours: "매일 14:00~21:00, 연중무휴",
+    hoursEn: "Daily 14:00–21:00, Open all year",
     priceLevel: 3,
     badge: {
       ko: "⭐ 친절한 메이드와 함께하는 즐거운 시간",
@@ -768,7 +768,7 @@ export const CAFES: Cafe[] = [
       en: "2nd branch of Hongdae flagship (opened Apr 12, 2024). Naver booking recommended. Membership points shared with Hongdae branch.",
       ja: "弘大本店の2号店(2024年4月12日オープン)。Naver予約推奨。ポイント弘大店と共有。",
       "zh-tw": "弘大本店2號店(2024.04.12開業)。建議Naver預約。會員點數與弘大店共用。",
-      "zh-cn": "弘大本店2号店(2024.04.12开业)。建议Naver预约。会员积分与弘大��共用。",
+      "zh-cn": "弘大本店2号店(2024.04.12开业)。建议Naver预约。会员积分与弘大店共用。",
       vi: "Chi nhánh 2 từ Hongdae (khai trương 12/4/2024). Khuyến nghị đặt Naver. Điểm chung với Hongdae.",
       th: "สาขา 2 จากฮงแด (เปิด 12 เม.ย. 2024) จองผ่าน Naver แต้มร่วมกับสาขาฮงแด",
     },
@@ -805,7 +805,7 @@ export const ROUTES: Route[] = [
     emoji: "🗺️",
     title: {
       ko: "서면 반나절 굿즈 투어", en: "Seomyeon Half-Day Goods Tour", ja: "西面半日グッズツアー",
-      "zh-tw": "西面半日周邊巡禮", "zh-cn": "西面半日周边巡礼",
+      "zh-tw": "西面半日周邊巡禮", "zh-cn": "西面半��周边巡礼",
       vi: "Tour Hàng Hóa Nửa Ngày Seomyeon", th: "ทัวร์สินค้าครึ่งวัน ซอมยอน",
     },
     stops: ["brother-seomyeon", "kodawari", "gacha-shop-seomyeon", "ouji-otaku", "oku-shop", "the-goods"],
