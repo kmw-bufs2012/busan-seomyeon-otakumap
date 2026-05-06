@@ -104,7 +104,7 @@ export function CafeCard({ cafe }: { cafe: Cafe }) {
           </Button>
         )}
         <Button asChild size="sm" variant="outline" className="text-xs h-10">
-          <a href={`https://www.google.com/maps/search/${encodeURIComponent(cafe.address)}`} target="_blank" rel="noopener noreferrer">
+          <a href={cafe.googleMap ?? `https://www.google.com/maps/search/${encodeURIComponent(cafe.address)}`} target="_blank" rel="noopener noreferrer">
             <ExternalLink className="h-3.5 w-3.5 mr-1" /> Google
           </a>
         </Button>
