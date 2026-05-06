@@ -3,6 +3,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MapButton } from "@/components/MapButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { NoticePopup } from "@/components/NoticePopup";
 import { ShopsTab } from "@/components/ShopsTab";
 import { CafesTab } from "@/components/CafesTab";
 import { Footer } from "@/components/Footer";
@@ -113,6 +114,7 @@ const Index = () => {
 
       <Footer />
       <ScrollToTop />
+      <NoticePopup />
     </div>
   );
 };
