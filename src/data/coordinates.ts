@@ -57,7 +57,7 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
   // 중앙대로692번길 46 B1 — 전포역 7번 출구 인근 (estimate)
-  "dream-maid": { lat: 35.1543000, lng: 129.0612000 },
+  "dream-maid": { lat: 35.154417, lng: 129.061882 }, // verified by user via Google Maps
   // 중앙대로692번길 21 2층 (updated address) — same street as dream-maid
   "maid-moon":  { lat: 35.1545000, lng: 129.0610000 },
 };

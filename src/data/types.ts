@@ -76,6 +76,8 @@ export interface Cafe {
   threads?: string;
   naverMap?: string;
   kakaoMap?: string;
+  googleMap?: string;
+  phone?: string;
   image?: string;
   notes?: LocalizedText;
   badge?: LocalizedText;
