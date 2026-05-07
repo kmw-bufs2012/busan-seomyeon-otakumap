@@ -677,6 +677,44 @@ export const SHOPS: Shop[] = [
       th: "⭐ ร้านเฉพาะ สินค้าอนิเมะ · สินค้าคลาสสิก · อิจิบังคูจิ · กาชาปอง · ฟิกเกอร์",
     },
   },
+
+  // ── 신규 점포 ──
+  {
+    id: "black-gacha-seomyeon",
+    name: {
+      ko: "블랙가챠 서면점", en: "Black Gacha Seomyeon", ja: "ブラックガチャ 西面店",
+      "zh-tw": "Black Gacha 西面店", "zh-cn": "Black Gacha 西面店",
+      vi: "Black Gacha Seomyeon", th: "Black Gacha สาขาซอมยอน",
+    },
+    category: "gacha",
+    address: "부산광역시 부산진구 서전로10번길 17",
+    addressEn: "17, Seojeon-ro 10beon-gil, Busanjin-gu, Busan",
+    hours: "",
+    hoursEn: "",
+    instagram: "black_gacha_sm",
+    image: "/images/black-gacha-seomyeon.jpg",
+    tags: ["tag_gacha", "tag_kuji", "tag_figure"],
+    payments: ["card", "cash"],
+    status: "partial",
+    badge: {
+      ko: "6~7월 서면 오픈 예정!",
+      en: "Opening in Seomyeon June–July!",
+      ja: "6〜7月、西面オープン予定！",
+      "zh-tw": "6~7月西面即將開幕!",
+      "zh-cn": "6~7月西面即将开业!",
+      vi: "Sắp khai trương tại Seomyeon tháng 6–7!",
+      th: "เตรียมเปิดที่ซอมยอน มิ.ย.–ก.ค.!",
+    },
+    notes: {
+      ko: "가챠 · 쿠지 · 피규어 전문\n\n총 가챠 기계 수 78대",
+      en: "Specialty: Gacha · Kuji · Figures\n\nTotal of 78 Gacha Machines",
+      ja: "ガチャ・くじ・フィギュア専門\n\nガチャ機 総数78台",
+      "zh-tw": "扭蛋 · 一番賞 · 模型 專門\n\n扭蛋機總數 78台",
+      "zh-cn": "扭蛋 · 一番赏 · 手办 专门\n\n扭蛋机总数 78台",
+      vi: "Chuyên Gacha · Kuji · Figure\n\nTổng cộng 78 máy Gacha",
+      th: "เชี่ยวชาญ กาชาปอง · คูจิ · ฟิกเกอร์\n\nเครื่องกาชาปองรวม 78 เครื่อง",
+    },
+  },
 ];
 
 export const CAFES: Cafe[] = [
@@ -714,7 +752,7 @@ export const CAFES: Cafe[] = [
     menu: [],
     instagram: "dreammaidcafe",
     twitter: "Dreammaidcafe_",
-    naverMap: naver("드림 메이드카페 부산"),
+    naverMap: naver("드림 메이드카페 부��"),
     googleMap: "https://www.google.com/maps/place/Dream+Maid+Cafe+(%EB%93%9C%EB%A6%BC+%EB%A9%94%EC%9D%B4%EB%93%9C%EC%B9%B4%ED%8E%98)/data=!4m10!1m2!2m1!1z65Oc66a8IOuplOydtOuTnOy5tO2OmCDshJzrqbQ!3m6!1s0x3568ebcd36776365:0x71f24292a911efb5!8m2!3d35.1544072!4d129.0618335!15sCh3rk5zrprwg66mU7J2065Oc7Lm07Y6YIOyEnOuptFogIh7rk5zrprwg66mU7J2065OcIOy5tO2OmCDshJzrqbSSAQRjYWZlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5UVU5KTFV4TVVVRlJFQUXgAQD6AQQIPhAc!16s%2Fg%2F11vsz6wc__?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
     image: "/images/DREAM_MAIDCAFE.jpg",
     notes: {
@@ -805,7 +843,7 @@ export const ROUTES: Route[] = [
     emoji: "🗺️",
     title: {
       ko: "서면 반나절 굿즈 투어", en: "Seomyeon Half-Day Goods Tour", ja: "西面半日グッズツアー",
-      "zh-tw": "西面半日周邊巡禮", "zh-cn": "西面半��周边巡礼",
+      "zh-tw": "西面半日周邊巡禮", "zh-cn": "西面半����边巡礼",
       vi: "Tour Hàng Hóa Nửa Ngày Seomyeon", th: "ทัวร์สินค้าครึ่งวัน ซอมยอน",
     },
     stops: ["brother-seomyeon", "kodawari", "gacha-shop-seomyeon", "ouji-otaku", "oku-shop", "the-goods"],
