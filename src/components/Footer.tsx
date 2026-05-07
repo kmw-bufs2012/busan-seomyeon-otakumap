@@ -47,7 +47,7 @@ export function Footer() {
 
           <p className="font-bold text-sm mt-6 mb-2 uppercase tracking-wider text-white/90">Stats</p>
           <ul className="text-xs text-white/70 space-y-1">
-            <li>25 {t("stats_shops")}</li>
+            <li>26 {t("stats_shops")}</li>
             <li>2 {t("tab_cafes").replace(/^☕\s*/, "")}</li>
             <li>7 {t("stats_languages")}</li>
             <li>{t("stats_update")}</li>
