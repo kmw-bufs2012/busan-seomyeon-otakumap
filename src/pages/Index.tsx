@@ -40,7 +40,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         {/* Hero background image */}
         <img
-          src="/images/seomyeon-otaku-street.jpg"
+          src="/images/banner-main.png"
           alt="서면 애니메이션 거리 - 덕후의 성지"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
