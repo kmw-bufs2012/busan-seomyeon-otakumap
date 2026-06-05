@@ -25,8 +25,6 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "j-goods":            { lat: 35.153675, lng: 129.059841 }, // verified by user via Naver Map
   "one-figure":         { lat: 35.1536592, lng: 129.0600483 }, // [GMaps]
   "one-figure-2":       { lat: 35.1542033, lng: 129.0600499 }, // verified by user
-  // 중앙대로680번가길 11-5 — approximate (near Anime Ocean); refine if exact coords provided
-  "butter-cheese-figure-village": { lat: 35.155090, lng: 129.059540 },
   "gacha-ocean":        { lat: 35.1538864, lng: 129.0600382 }, // [GMaps]
   "brother-young":      { lat: 35.1535431, lng: 129.0600532 }, // [GMaps]
 
@@ -57,6 +55,8 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "oku-shop":               { lat: 35.154297, lng: 129.061579 },
   // 서전로10번길 17 — provided by user
   "black-gacha-seomyeon":   { lat: 35.156966, lng: 129.060523 },
+  // 중앙대로680번가길 11-5 3층 — verified by user via Google Maps
+  "butter-cheese-figure-village": { lat: 35.153844, lng: 129.060562 },
 };
 
 export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
