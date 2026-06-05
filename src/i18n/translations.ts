@@ -131,6 +131,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "이치반쿠지",
     tag_japan_goods: "일본굿즈",
     tag_import: "수입",
+    tag_sanrio: "산리오",
+    tag_individual_packaging: "개별포장",
   },
   en: {
     brand: "ANIBUS · Busan Seomyeon Anime Shop Map",
@@ -250,6 +252,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "Ichiban Kuji",
     tag_japan_goods: "Japanese Goods",
     tag_import: "Import",
+    tag_sanrio: "Sanrio",
+    tag_individual_packaging: "Individual Packaging",
   },
   ja: {
     brand: "ANIBUS · 釜山西面アニメショップマップ",
@@ -369,6 +373,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "一番くじ",
     tag_japan_goods: "日本グッズ",
     tag_import: "輸入",
+    tag_sanrio: "サンリオ",
+    tag_individual_packaging: "個別包装",
   },
   "zh-tw": {
     brand: "ANIBUS · 釜山西面動漫店地圖",
@@ -488,6 +494,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "一番賞",
     tag_japan_goods: "日本周邊",
     tag_import: "進口",
+    tag_sanrio: "三麗鷗",
+    tag_individual_packaging: "獨立包裝",
   },
   "zh-cn": {
     brand: "ANIBUS · 釜山西面动漫店地图",
@@ -563,7 +571,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     map_list_label: "店家列表",
     map_loading: "地图加载中...",
     map_error: "无法加载地图，请稍后再试。",
-    map_back_to_main: "返回",
+    map_back_to_main: "返��",
     map_show_count: "显示 {count} 个地点",
 
     detail_title: "详细信息",
@@ -607,6 +615,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "一番赏",
     tag_japan_goods: "日本周边",
     tag_import: "进口",
+    tag_sanrio: "三丽鸥",
+    tag_individual_packaging: "独立包装",
   },
   vi: {
     brand: "ANIBUS · Bản đồ Cửa hàng Anime Seomyeon Busan",
@@ -726,6 +736,8 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "Ichiban Kuji",
     tag_japan_goods: "Hàng Nhật",
     tag_import: "Nhập khẩu",
+    tag_sanrio: "Sanrio",
+    tag_individual_packaging: "Đóng gói riêng",
   },
   th: {
     brand: "ANIBUS · แผนที่ร้านอนิเมะซอมยอนปูซาน",
@@ -747,7 +759,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     open_now: "เปิดอยู่",
     closed: "ปิดแล้ว",
     hours_unknown: "ไม่ทราบเวลา",
-    tax_free: "★ ปลอดภาษี TAX FREE",
+    tax_free: "★ ปลอด��าษี TAX FREE",
     address: "ที่อยู่",
     hours: "เวลาทำการ",
     instagram: "Instagram",
@@ -845,5 +857,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     tag_ichiban_kuji: "อิจิบังคูจิ",
     tag_japan_goods: "สินค้าญี่ปุ่น",
     tag_import: "นำเข้า",
+    tag_sanrio: "ซานริโอ",
+    tag_individual_packaging: "บรรจุแยกชิ้น",
   },
 };
