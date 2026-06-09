@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
@@ -22,6 +22,9 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/map" element={<MapPage />} />
+              {/* Detail is shown via a modal on the map page. Any lingering
+                  /spots/:id links redirect home instead of erroring. */}
+              <Route path="/spots/:id" element={<Navigate to="/" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
