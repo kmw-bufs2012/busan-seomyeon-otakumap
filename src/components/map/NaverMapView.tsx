@@ -18,6 +18,11 @@ interface NaverMapViewProps {
   activeId: string | null;
   /** Callback when the user clicks a marker. */
   onMarkerClick: (id: string) => void;
+  /**
+   * When true, the detail modal is open — we hide the Naver zoom control so
+   * it doesn't overlap/clash with the modal UI. Restored when it closes.
+   */
+  detailOpen?: boolean;
 }
 
 const COLOR_BY_CATEGORY: Record<string, string> = {
@@ -156,7 +161,7 @@ function buildMarkerIcon(category: string): { content: string; size: number } {
   };
 }
 
-export function NaverMapView({ places, activeId, onMarkerClick }: NaverMapViewProps) {
+export function NaverMapView({ places, activeId, onMarkerClick, detailOpen }: NaverMapViewProps) {
   const { lang } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -316,6 +321,14 @@ export function NaverMapView({ places, activeId, onMarkerClick }: NaverMapViewPr
     map.panTo(new naver.LatLng(pc.lat, pc.lng));
     if (map.getZoom() < 17) map.setZoom(17);
   }, [activeId, places, lang]);
+
+  // Toggle the Naver zoom control. While the detail modal is open we hide it
+  // so the +/- bar doesn't overlap or clash with the modal UI (작업 1, A안).
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+    map.setOptions({ zoomControl: !detailOpen });
+  }, [detailOpen]);
 
   return (
     <div

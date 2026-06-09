@@ -170,6 +170,7 @@ const MapPage = () => {
                 places={visiblePlaces}
                 activeId={activeId}
                 onMarkerClick={setActiveId}
+                detailOpen={detailId !== null}
               />
             ) : (
               <MapPlaceholder state={loaderState} error={loaderError} />
