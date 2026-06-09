@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, AlertCircle } from "lucide-react";
 import { CAFE_COORDS, SHOP_COORDS } from "@/data/coordinates";
@@ -45,6 +45,30 @@ const MapPage = () => {
   // ID of the place whose detail modal is currently open. Independent of
   // `activeId` so users can pan to a marker without forcing the modal open.
   const [detailId, setDetailId] = useState<string | null>(null);
+  // Ref to the map section so we can scroll it into view on mobile, where the
+  // map sits above the list and a card click would otherwise be invisible.
+  const mapContainerRef = useRef<HTMLElement>(null);
+
+  // Handle a card click: pan the map (via activeId), scroll the map into view
+  // on narrow screens, then open the detail modal. On desktop the map and list
+  // are side-by-side, so no scrolling is needed.
+  const handleCardClick = (id: string) => {
+    setActiveId(id); // (1) map panTo is driven by activeId inside NaverMapView
+    if (window.innerWidth < 768) {
+      // (2) scroll to the map. A short delay lets the panTo animation start so
+      // the user sees the map move as it scrolls up.
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      window.setTimeout(() => {
+        mapContainerRef.current?.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start",
+        });
+      }, 120);
+    }
+    setDetailId(id); // (3) open detail
+  };
 
   // Update the document title for SEO/UX.
   useEffect(() => {
@@ -144,7 +168,7 @@ const MapPage = () => {
                   <MapPlaceCard
                     place={place}
                     active={activeId === place.id}
-                    onClick={() => setActiveId(place.id)}
+                    onClick={() => handleCardClick(place.id)}
                     onDetail={() => setDetailId(place.id)}
                   />
                 </li>
@@ -161,6 +185,8 @@ const MapPage = () => {
         {/* Map column. Naver Maps requires an explicit height — we use 50vh
             on mobile and fill the remaining viewport on md+ screens. */}
         <section
+          ref={mapContainerRef}
+          id="map-container"
           className="order-1 relative w-full md:order-2 md:flex-1"
           aria-label={t("map_page_title")}
         >
