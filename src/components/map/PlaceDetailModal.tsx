@@ -19,6 +19,7 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/compone
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CATEGORY_META } from "@/data/shops";
+import { CAFE_COORDS, SHOP_COORDS } from "@/data/coordinates";
 import { useI18n } from "@/i18n/I18nProvider";
 import { isOpenNow } from "@/lib/openNow";
 import { localizeHours } from "@/lib/localizeHours";
@@ -27,6 +28,7 @@ import {
   Globe,
   Instagram,
   MapPin,
+  Navigation,
   Phone,
   Twitter,
 } from "lucide-react";
@@ -108,6 +110,17 @@ function PlaceDetailContent({ place }: { place: Place }) {
 
   // Tag rendering — same fallback as ShopCard: unknown keys (brand names) pass through.
   const tags = "tags" in place && place.tags ? place.tags : [];
+
+  // Resolve the place's coordinates (kept in a separate data file) so we can
+  // build a Naver "walking directions" URL. Falls back to undefined when the
+  // place has no registered coordinates.
+  const coords =
+    place._kind === "cafe" ? CAFE_COORDS[place.id] : SHOP_COORDS[place.id];
+  const routeUrl = coords
+    ? `https://map.naver.com/p/directions/-/${coords.lng},${coords.lat},${encodeURIComponent(
+        title
+      )},,PLACE/-/walk`
+    : null;
 
   return (
     <>
@@ -285,6 +298,18 @@ function PlaceDetailContent({ place }: { place: Place }) {
 
         {/* Map links — Naver Map first (per spec, primary source of truth) */}
         <div className="flex flex-col gap-2 border-t border-border pt-4 sm:flex-row">
+          {routeUrl && (
+            <Button
+              asChild
+              size="default"
+              className="flex-1 bg-[#0066CC] text-white hover:bg-[#0066CC]/90"
+            >
+              <a href={routeUrl} target="_blank" rel="noopener noreferrer">
+                <Navigation className="mr-1.5 h-4 w-4" />
+                {t("detail_view_route")}
+              </a>
+            </Button>
+          )}
           {"naverMap" in place && place.naverMap && (
             <Button
               asChild

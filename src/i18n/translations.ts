@@ -92,6 +92,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "상세 정보",
     detail_view_naver_map: "네이버 지도에서 보기",
+    detail_view_route: "경로 보기 (네이버 지도)",
     detail_view_google_map: "구글맵에서 보기",
     detail_close: "닫기",
     detail_preparing: "상세 정보를 준비 중입니다.",
@@ -211,6 +212,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "Details",
     detail_view_naver_map: "View on Naver Map",
+    detail_view_route: "Get directions (Naver Map)",
     detail_view_google_map: "View on Google Maps",
     detail_close: "Close",
     detail_preparing: "Detailed information is coming soon.",
@@ -330,6 +332,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "詳細情報",
     detail_view_naver_map: "NAVERマップで見る",
+    detail_view_route: "経路を見る (Naverマップ)",
     detail_view_google_map: "Googleマップで見る",
     detail_close: "閉じる",
     detail_preparing: "詳細情報は準備中です。",
@@ -449,6 +452,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "詳細資訊",
     detail_view_naver_map: "在 Naver 地圖查看",
+    detail_view_route: "查看路線 (Naver 地圖)",
     detail_view_google_map: "在 Google 地圖查看",
     detail_close: "關閉",
     detail_preparing: "詳細資訊準備中。",
@@ -568,6 +572,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "详细信息",
     detail_view_naver_map: "在 Naver 地图查看",
+    detail_view_route: "查看路线 (Naver 地图)",
     detail_view_google_map: "在 Google 地图查看",
     detail_close: "关闭",
     detail_preparing: "详细信息准备中。",
@@ -687,6 +692,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "Chi tiết",
     detail_view_naver_map: "Xem trên Naver Map",
+    detail_view_route: "Xem đường đi (Naver Map)",
     detail_view_google_map: "Xem trên Google Maps",
     detail_close: "Đóng",
     detail_preparing: "Thông tin chi tiết đang được chuẩn bị.",
@@ -747,7 +753,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
     open_now: "เปิดอยู่",
     closed: "ปิดแล้ว",
     hours_unknown: "ไม่ทราบเวลา",
-    tax_free: "★ ปลอดภาษี TAX FREE",
+    tax_free: "★ ปลอด��าษี TAX FREE",
     address: "ที่อยู่",
     hours: "เวลาทำการ",
     instagram: "Instagram",
@@ -806,6 +812,7 @@ export const TRANSLATIONS: Record<Lang, Dict> = {
 
     detail_title: "รายละเอียด",
     detail_view_naver_map: "ดูบน Naver Map",
+    detail_view_route: "ดูเส้นทาง (Naver Map)",
     detail_view_google_map: "ดูบน Google Maps",
     detail_close: "ปิด",
     detail_preparing: "ข้อมูลรายละเอียดอยู่ระหว่างการเตรียม",
