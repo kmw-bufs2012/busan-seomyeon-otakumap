@@ -85,7 +85,7 @@ export function NoticePopup() {
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-[520px] rounded-2xl">
+      <DialogContent className="w-[calc(100vw-2rem)] sm:w-full sm:max-w-[520px] max-h-[85vh] overflow-y-auto rounded-2xl">
         <DialogHeader>
           <DialogTitle className="text-xl md:text-2xl font-bold gradient-hero bg-clip-text text-transparent text-balance leading-snug">
             {t("notice_title")}

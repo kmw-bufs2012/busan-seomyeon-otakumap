@@ -64,6 +64,30 @@ export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
   "dream-maid": { lat: 35.154417, lng: 129.061882 }, // verified by user via Google Maps
   // 중앙대로692번길 21 2층 (updated address) — same street as dream-maid
   "maid-moon":  { lat: 35.1545000, lng: 129.0610000 },
+
+  // ── 신규 메이드/콘셉트 카페 (estimates from street address) ──
+  // 중앙대로702번길 15 지하 1층
+  "kurohato":            { lat: 35.155210, lng: 129.062620 },
+  // 동천로95번길 8 2층
+  "mochi-cosmaid":       { lat: 35.156600, lng: 129.063600 },
+  // 중앙대로702번길 27-8 1층 (같은 건물: lorelei / lab-aether / blood-moon)
+  "lorelei":             { lat: 35.155380, lng: 129.062880 },
+  // 서전로68번길 51 3층
+  "gakkou-tomo":         { lat: 35.157300, lng: 129.060700 },
+  // 서전로68번길 27 3층
+  "haikou":              { lat: 35.157020, lng: 129.060920 },
+  // 중앙대로702번길 27-8 2층
+  "lab-aether":          { lat: 35.155410, lng: 129.062930 },
+  // 중앙대로702번길 27-8 3층
+  "blood-moon":          { lat: 35.155440, lng: 129.062980 },
+  // 전포대로 212 3층
+  "kirarin-maid":        { lat: 35.153520, lng: 129.064800 },
+  // 전포동 356-4
+  "kirarin-reverse-bar": { lat: 35.153800, lng: 129.064020 },
+  // 동천로 72 2층
+  "project-koi":         { lat: 35.156000, lng: 129.063200 },
+  // 신천대로62번길 71 3층
+  "teitaku":             { lat: 35.154500, lng: 129.059000 },
 };
 
 /** Seomyeon district center used as the default map center. */

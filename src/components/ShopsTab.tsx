@@ -89,7 +89,7 @@ export function ShopsTab() {
   return (
     <div>
       {/* sticky filter bar */}
-      <div className="sticky top-[64px] z-30 -mx-4 px-4 py-3 bg-background/85 backdrop-blur-xl border-b border-border">
+      <div className="sticky top-[128px] z-20 -mx-4 px-4 py-3 bg-background/85 backdrop-blur-xl border-b border-border">
         <div className="container max-w-7xl mx-auto flex flex-col gap-3">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
