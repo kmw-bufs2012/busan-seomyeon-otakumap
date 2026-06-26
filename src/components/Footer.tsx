@@ -1,5 +1,6 @@
 import { useI18n } from "@/i18n/I18nProvider";
 import { LANGS, Lang } from "@/i18n/translations";
+import { SHOPS, CAFES } from "@/data/shops";
 import { Instagram, Twitter } from "lucide-react";
 
 export function Footer() {
@@ -47,8 +48,8 @@ export function Footer() {
 
           <p className="font-bold text-sm mt-6 mb-2 uppercase tracking-wider text-white/90">Stats</p>
           <ul className="text-xs text-white/70 space-y-1">
-            <li>27 {t("stats_shops")}</li>
-            <li>2 {t("tab_cafes").replace(/^☕\s*/, "")}</li>
+            <li>{SHOPS.length} {t("stats_shops")}</li>
+            <li>{CAFES.length} {t("tab_cafes").replace(/^☕\s*/, "")}</li>
             <li>7 {t("stats_languages")}</li>
             <li>{t("stats_update")}</li>
           </ul>

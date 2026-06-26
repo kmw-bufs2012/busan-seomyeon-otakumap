@@ -70,7 +70,7 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-2.5 sm:gap-3 mt-8 sm:mt-10 max-w-4xl">
               {[
                 { n: SHOPS.length, l: t("stats_shops") },
-                { n: 2, l: t("stats_cafes") },
+                { n: CAFES.length, l: t("stats_cafes") },
                 { n: 7, l: t("stats_languages") },
                 { n: "🏙", l: t("stats_area") },
                 { n: "🔄", l: t("stats_update") },
