@@ -14,7 +14,7 @@ const Index = () => {
   const { t } = useI18n();
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Copyright notice */}
       <div className="bg-red-600 text-white text-center text-xs py-2 px-4 font-semibold">
         📷 모든 장소의 사진은 해당 사업주에게 소유권이 있습니다. All photos are property of their respective business owners.
@@ -53,13 +53,13 @@ const Index = () => {
           }}
           aria-hidden="true"
         />
-        <div className="relative container max-w-7xl mx-auto px-4 py-20 md:py-28 text-white">
+        <div className="relative container max-w-7xl mx-auto px-4 py-14 sm:py-20 md:py-28 text-white">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-5">
+            <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-5">
               <span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
               Busan · Seomyeon · 釜山
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-balance mb-5 whitespace-nowrap">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.12] md:leading-[1.05] text-balance break-keep mb-5">
               {t("hero_title")}
             </h1>
             <p className="text-base md:text-lg text-white/80 max-w-2xl break-keep leading-relaxed">
@@ -67,7 +67,7 @@ const Index = () => {
             </p>
 
             {/* Stats — solid white text on subtle dark glass, no gradient overlay */}
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-10 max-w-4xl">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-2.5 sm:gap-3 mt-8 sm:mt-10 max-w-4xl">
               {[
                 { n: SHOPS.length, l: t("stats_shops") },
                 { n: 2, l: t("stats_cafes") },
