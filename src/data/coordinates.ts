@@ -65,29 +65,27 @@ export const CAFE_COORDS: Record<string, { lat: number; lng: number }> = {
   // 중앙대로692번길 21 2층 (updated address) — same street as dream-maid
   "maid-moon":  { lat: 35.1545000, lng: 129.0610000 },
 
-  // ── 신규 메이드/콘셉트 카페 (estimates from street address) ──
+  // ── 신규 메이드/콘셉트 카페 — all verified by user via Google Maps ──
   // 중앙대로702번길 15 지하 1층
-  "kurohato":            { lat: 35.155210, lng: 129.062620 },
+  "kurohato":            { lat: 35.1554444, lng: 129.0600497 },
   // 동천로95번길 8 2층
-  "mochi-cosmaid":       { lat: 35.156600, lng: 129.063600 },
-  // 중앙대로702번길 27-8 1층 (같은 건물: lorelei / lab-aether / blood-moon)
-  "lorelei":             { lat: 35.155380, lng: 129.062880 },
+  "mochi-cosmaid":       { lat: 35.1573341, lng: 129.0618101 },
+  // 중앙대로702번길 27-8 (같은 건물: lorelei 1층 / lab-aether 2층 / blood-moon 3층)
+  "lorelei":             { lat: 35.1556716, lng: 129.0606515 },
+  "lab-aether":          { lat: 35.1556716, lng: 129.0606515 },
+  "blood-moon":          { lat: 35.1556716, lng: 129.0606515 },
   // 서전로68번길 51 3층
-  "gakkou-tomo":         { lat: 35.157300, lng: 129.060700 },
+  "gakkou-tomo":         { lat: 35.1555156, lng: 129.0673034 },
   // 서전로68번길 27 3층
-  "haikou":              { lat: 35.157020, lng: 129.060920 },
-  // 중앙대로702번길 27-8 2층
-  "lab-aether":          { lat: 35.155410, lng: 129.062930 },
-  // 중앙대로702번길 27-8 3층
-  "blood-moon":          { lat: 35.155440, lng: 129.062980 },
+  "haikou":              { lat: 35.1565381, lng: 129.0672789 },
   // 전포대로 212 3층
-  "kirarin-maid":        { lat: 35.153520, lng: 129.064800 },
+  "kirarin-maid":        { lat: 35.1555646, lng: 129.0656677 },
   // 전포동 356-4
-  "kirarin-reverse-bar": { lat: 35.153800, lng: 129.064020 },
+  "kirarin-reverse-bar": { lat: 35.1526479, lng: 129.0664115 },
   // 동천로 72 2층
-  "project-koi":         { lat: 35.156000, lng: 129.063200 },
+  "project-koi":         { lat: 35.1551725, lng: 129.0625075 },
   // 신천대로62번길 71 3층
-  "teitaku":             { lat: 35.154500, lng: 129.059000 },
+  "teitaku":             { lat: 35.1539490, lng: 129.0583047 },
 };
 
 /** Seomyeon district center used as the default map center. */
