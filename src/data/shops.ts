@@ -709,45 +709,6 @@ export const SHOPS: Shop[] = [
     },
   },
 
-  // ── 신규 점포 ──
-  {
-    id: "black-gacha-seomyeon",
-    name: {
-      ko: "블랙가챠 서면점", en: "Black Gacha Seomyeon", ja: "ブラックガチャ 西面店",
-      "zh-tw": "Black Gacha 西面店", "zh-cn": "Black Gacha 西面店",
-      vi: "Black Gacha Seomyeon", th: "Black Gacha สาขาซอมยอน",
-    },
-    category: "gacha",
-    address: "부산광역시 부산진구 서전로10번길 17",
-    addressEn: "17, Seojeon-ro 10beon-gil, Busanjin-gu, Busan",
-    hours: "연중무휴 24시간 영업 (00:00–24:00)",
-    hoursEn: "Open 24 hours, year-round (00:00–24:00)",
-    phone: "010-3239-1233",
-    instagram: "black_gacha_sm",
-    naverMap: naver("블랙가챠 서면점 서전로10번길 17"),
-    image: "/images/black-gacha-seomyeon.jpg",
-    tags: ["tag_gacha", "tag_kuji", "tag_figure"],
-    payments: ["card", "cash"],
-    status: "verified",
-    badge: {
-      ko: "🎉 서면 신규 오픈! 24시간 영업",
-      en: "🎉 Now Open in Seomyeon! Open 24h",
-      ja: "🎉 西面に新規オープン！24時間営業",
-      "zh-tw": "🎉 西面新開幕!24小時營業",
-      "zh-cn": "🎉 西面新开业!24小时营业",
-      vi: "🎉 Vừa khai trương tại Seomyeon! Mở cửa 24h",
-      th: "🎉 เปิดใหม่ที่ซอมยอน! เปิด 24 ชม.",
-    },
-    notes: {
-      ko: "오타쿠 사장님이 덕질하고 싶어서 직접 차린 가챠샵 ✨\n\n가챠 · 쿠지 · 피규어 전문\n\n총 가챠 기계 수 78대",
-      en: "A gacha shop opened by an otaku owner who just wanted to enjoy the hobby ✨\n\nSpecialty: Gacha · Kuji · Figures\n\nTotal of 78 Gacha Machines",
-      ja: "オタクの店長が推し活したくて自ら開いたガチャショップ ✨\n\nガチャ・くじ・フィギュア専門\n\nガチャ機 総数78台",
-      "zh-tw": "御宅族老闆為了追星而親自開設的扭蛋店 ✨\n\n扭蛋 · 一番賞 · 模型 專門\n\n扭蛋機總數 78台",
-      "zh-cn": "御宅族老板为了追星而亲自开设的扭蛋店 ✨\n\n扭蛋 · 一番赏 · 手办 专门\n\n扭蛋机总数 78台",
-      vi: "Cửa hàng gacha do một ông chủ otaku tự mở vì đam mê ✨\n\nChuyên Gacha · Kuji · Figure\n\nTổng cộng 78 máy Gacha",
-      th: "ร้านกาชาปองที่เจ้าของสายโอตาคุเปิดเองเพราะอยากตามอวยตัวละครที่รัก ✨\n\nเชี่ยวชาญ กาชาปอง · คูจิ · ฟิกเกอร์\n\nเครื่องกาชาปองรวม 78 เครื่อง",
-    },
-  },
 ];
 
 /** Standard price warning shown on every maid/butler café card. */
