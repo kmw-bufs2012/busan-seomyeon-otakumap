@@ -53,8 +53,6 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   // ── 신규 점포 ──
   // 중앙대로692번길 42 2층 — provided by user
   "oku-shop":               { lat: 35.154297, lng: 129.061579 },
-  // 서전로10번길 17 — provided by user
-  "black-gacha-seomyeon":   { lat: 35.156966, lng: 129.060523 },
   // 중앙대로680번가길 11-5 3층 — verified by user via Google Maps
   "butter-cheese-figure-village": { lat: 35.153844, lng: 129.060562 },
 };
