@@ -97,7 +97,7 @@ export function ShopsTab() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder={t("search_placeholder")}
-              className="pl-9 bg-card border-border"
+              className="pl-9 bg-card border-border rounded-md h-10"
             />
           </div>
           <div className="flex gap-2 overflow-x-auto scrollbar-hide -mx-2 px-2">
@@ -106,10 +106,10 @@ export function ShopsTab() {
                 key={f.key}
                 onClick={() => setFilter(f.key)}
                 className={cn(
-                  "whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-bold transition-smooth border",
+                  "whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition-smooth border",
                   filter === f.key
-                    ? "bg-primary text-primary-foreground border-primary shadow-glow"
-                    : "bg-card text-muted-foreground border-border hover:border-primary hover:text-foreground"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
                 )}
               >
                 {f.label}
@@ -117,7 +117,7 @@ export function ShopsTab() {
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            {t("showing")} <span className="font-bold text-foreground">{filtered.length}</span> {t("of")} {SHOPS.length}
+            {t("showing")} <span className="font-semibold text-foreground">{filtered.length}</span> {t("of")} {SHOPS.length}
           </p>
         </div>
       </div>
@@ -135,7 +135,7 @@ export function ShopsTab() {
         <section className="mt-16">
           <header className="flex items-center gap-2 mb-6">
             <Sparkles className="h-5 w-5 text-primary" />
-            <h2 className="text-2xl font-extrabold">{t("tab_routes")}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight">{t("tab_routes")}</h2>
           </header>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {ROUTES.map((r) => <RouteCard key={r.id} route={r} />)}

@@ -4,111 +4,126 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 20% 10%;
+    --background: 40 24% 97%;
+    --foreground: 30 14% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 20% 10%;
+    --card: 40 30% 99%;
+    --card-foreground: 30 14% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 20% 10%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 30 14% 12%;
 
-    --primary: 245 100% 69%;          /* #6C63FF */
+    --primary: 245 58% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 245 100% 80%;
+    --primary-glow: 245 58% 66%;
 
-    --secondary: 335 100% 71%;        /* #FF6B9D */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 40 16% 93%;
+    --secondary-foreground: 30 16% 20%;
 
-    --muted: 240 10% 94%;
-    --muted-foreground: 240 5% 40%;
+    --muted: 40 16% 93%;
+    --muted-foreground: 32 8% 42%;
 
-    --accent: 245 100% 96%;
-    --accent-foreground: 245 80% 40%;
+    --accent: 245 48% 95%;
+    --accent-foreground: 245 52% 40%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 4 72% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --warning: 42 100% 50%;
-    --warning-foreground: 30 80% 15%;
+    --warning: 36 92% 46%;
+    --warning-foreground: 30 78% 18%;
 
-    --success: 142 71% 45%;
+    --success: 150 52% 36%;
     --success-foreground: 0 0% 100%;
 
-    --border: 240 10% 88%;
-    --input: 240 10% 88%;
-    --ring: 245 100% 69%;
+    --border: 38 14% 87%;
+    --input: 38 14% 85%;
+    --ring: 245 58% 52%;
 
-    --radius: 0.875rem;
+    --radius: 0.625rem;
 
-    /* Category colors */
-    --cat-anime: 245 100% 69%;
-    --cat-figure: 211 64% 57%;
-    --cat-gacha: 105 73% 45%;
-    --cat-mangacafe: 28 96% 53%;
-    --cat-cafecollab: 180 82% 42%;
-    --cat-arttoy: 335 100% 71%;
-    --cat-maid: 292 84% 61%;
-    --cat-butler: 330 81% 60%;
-    --cat-concafe: 260 75% 62%;
-    --cat-maidbar: 350 70% 52%;
+    /* Category colors — mid-saturation so dots/labels read on a calm canvas */
+    --cat-anime: 245 56% 56%;
+    --cat-figure: 211 56% 48%;
+    --cat-gacha: 142 50% 38%;
+    --cat-mangacafe: 28 74% 48%;
+    --cat-cafecollab: 184 58% 36%;
+    --cat-arttoy: 332 58% 54%;
+    --cat-maid: 296 52% 54%;
+    --cat-butler: 330 48% 50%;
+    --cat-concafe: 258 52% 56%;
+    --cat-maidbar: 350 56% 50%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(245 100% 69%) 0%, hsl(335 100% 71%) 100%);
-    --gradient-cafe: linear-gradient(135deg, hsl(292 84% 61%) 0%, hsl(330 81% 60%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(240 30% 10%) 0%, hsl(245 50% 15%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(245 58% 52%) 0%, hsl(258 52% 48%) 100%);
+    --gradient-cafe: linear-gradient(135deg, hsl(245 58% 52%) 0%, hsl(258 52% 48%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(32 12% 11%) 0%, hsl(30 12% 8%) 100%);
 
-    --shadow-card: 0 4px 20px -8px hsl(245 100% 69% / 0.15);
-    --shadow-glow: 0 0 40px hsl(245 100% 69% / 0.4);
+    --shadow-card: 0 1px 2px hsl(30 18% 16% / 0.05), 0 8px 24px -14px hsl(30 18% 16% / 0.16);
+    --shadow-glow: 0 2px 4px hsl(30 18% 16% / 0.07), 0 16px 36px -16px hsl(30 18% 16% / 0.22);
+    --shadow-elevated: 0 4px 8px hsl(30 18% 16% / 0.08), 0 24px 48px -20px hsl(30 18% 16% / 0.28);
 
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 240 30% 8%;          /* #0F0F1A */
-    --foreground: 0 0% 98%;
+    --background: 30 12% 8%;
+    --foreground: 38 18% 92%;
 
-    --card: 240 25% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 32 11% 12%;
+    --card-foreground: 38 18% 92%;
 
-    --popover: 240 25% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 32 11% 12%;
+    --popover-foreground: 38 18% 92%;
 
-    --primary: 245 100% 75%;
-    --primary-foreground: 240 30% 8%;
-    --primary-glow: 245 100% 80%;
+    --primary: 246 74% 72%;
+    --primary-foreground: 30 14% 9%;
+    --primary-glow: 246 74% 78%;
 
-    --secondary: 335 100% 71%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 32 9% 17%;
+    --secondary-foreground: 38 16% 88%;
 
-    --muted: 240 20% 18%;
-    --muted-foreground: 240 10% 65%;
+    --muted: 32 9% 17%;
+    --muted-foreground: 36 10% 62%;
 
-    --accent: 245 50% 25%;
-    --accent-foreground: 245 100% 90%;
+    --accent: 245 36% 22%;
+    --accent-foreground: 246 74% 86%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 4 70% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --warning: 42 100% 60%;
-    --warning-foreground: 30 80% 10%;
+    --warning: 38 90% 58%;
+    --warning-foreground: 38 92% 72%;
 
-    --success: 142 71% 50%;
-    --success-foreground: 0 0% 100%;
+    --success: 150 48% 52%;
+    --success-foreground: 30 14% 9%;
 
-    --border: 240 20% 22%;
-    --input: 240 20% 22%;
-    --ring: 245 100% 75%;
+    --border: 34 9% 21%;
+    --input: 34 9% 23%;
+    --ring: 246 74% 72%;
 
-    --shadow-card: 0 4px 24px -4px hsl(245 100% 50% / 0.3);
-    --shadow-glow: 0 0 60px hsl(245 100% 69% / 0.5);
+    --cat-anime: 245 70% 72%;
+    --cat-figure: 211 60% 64%;
+    --cat-gacha: 142 46% 56%;
+    --cat-mangacafe: 28 80% 62%;
+    --cat-cafecollab: 184 54% 54%;
+    --cat-arttoy: 332 64% 68%;
+    --cat-maid: 296 56% 70%;
+    --cat-butler: 330 54% 66%;
+    --cat-concafe: 258 60% 72%;
+    --cat-maidbar: 350 62% 64%;
 
-    --gradient-dark: linear-gradient(135deg, hsl(240 30% 8%) 0%, hsl(245 50% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(245 42% 40%) 0%, hsl(258 40% 32%) 100%);
+    --gradient-cafe: linear-gradient(135deg, hsl(245 42% 40%) 0%, hsl(258 40% 32%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(30 12% 8%) 0%, hsl(30 14% 5%) 100%);
+
+    --shadow-card: 0 1px 2px hsl(0 0% 0% / 0.36), 0 10px 28px -14px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 2px 6px hsl(0 0% 0% / 0.46), 0 18px 40px -16px hsl(0 0% 0% / 0.72);
+    --shadow-elevated: 0 4px 10px hsl(0 0% 0% / 0.52), 0 28px 56px -20px hsl(0 0% 0% / 0.82);
   }
 }
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground antialiased; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  body { @apply bg-background text-foreground antialiased; font-family: 'Inter', system-ui, -apple-system, sans-serif; font-feature-settings: 'cv11', 'ss01'; }
   h1, h2, h3 { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; letter-spacing: -0.02em; }
 }
 
@@ -118,6 +133,7 @@
   .gradient-dark { background: var(--gradient-dark); }
   .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
   .transition-smooth { transition: var(--transition-smooth); }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
@@ -131,7 +147,7 @@
 .animate-float { animation: float 3s ease-in-out infinite; }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4); }
-  50% { box-shadow: 0 0 0 12px hsl(var(--primary) / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.18); }
+  50% { box-shadow: 0 0 0 8px hsl(var(--primary) / 0); }
 }
-.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2.4s ease-in-out infinite; }

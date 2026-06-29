@@ -16,14 +16,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Copyright notice */}
-      <div className="bg-red-600 text-white text-center text-xs py-2 px-4 font-semibold">
+      <div className="bg-foreground text-background text-center text-[11px] py-2 px-4 font-medium tracking-wide">
         📷 모든 장소의 사진은 해당 사업주에게 소유권이 있습니다. All photos are property of their respective business owners.
       </div>
 
       {/* Sticky top bar */}
       <header className="sticky top-0 z-40 bg-background/85 backdrop-blur-xl border-b border-border">
         <div className="container max-w-7xl mx-auto h-16 px-4 flex items-center justify-between gap-3">
-          <a href="#" className="flex items-center gap-2 font-extrabold">
+          <a href="#" className="flex items-center gap-2 font-bold tracking-tight">
             <span className="text-2xl">🎌</span>
             <span className="hidden sm:inline">ANIBUS</span>
             <span className="text-xs text-muted-foreground hidden md:inline">· {t("brand_subtitle")}</span>
@@ -49,20 +49,20 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(5,0,20,0.85) 0%, rgba(5,0,20,0.55) 55%, rgba(5,0,20,0.35) 100%)",
+              "linear-gradient(180deg, rgba(12,10,8,0.55) 0%, rgba(12,10,8,0.82) 100%)",
           }}
           aria-hidden="true"
         />
         <div className="relative container max-w-7xl mx-auto px-4 py-14 sm:py-20 md:py-28 text-white">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-5">
-              <span className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
+            <span className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-5">
+              <span className="h-1.5 w-1.5 rounded-full bg-white/80 animate-pulse" />
               Busan · Seomyeon · 釜山
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.12] md:leading-[1.05] text-balance break-keep mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.08] text-balance break-keep mb-5">
               {t("hero_title")}
             </h1>
-            <p className="text-base md:text-lg text-white/80 max-w-2xl break-keep leading-relaxed">
+            <p className="text-base md:text-lg text-white/75 max-w-2xl break-keep leading-relaxed">
               {t("hero_sub")}
             </p>
 
@@ -77,10 +77,10 @@ const Index = () => {
               ].map((s, i) => (
                 <div
                   key={i}
-                  className="rounded-2xl bg-black/40 backdrop-blur border border-white/15 px-4 py-3"
+                  className="rounded-lg bg-white/8 backdrop-blur border border-white/12 px-4 py-3"
                 >
-                  <div className="text-2xl md:text-3xl font-extrabold text-white">{s.n}</div>
-                  <div className="text-xs text-white mt-1 font-medium">{s.l}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white">{s.n}</div>
+                  <div className="text-[11px] text-white/70 mt-1 font-medium uppercase tracking-wider">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -93,11 +93,11 @@ const Index = () => {
         <Tabs defaultValue="shops" className="w-full">
           <div className="sticky top-16 z-30 bg-background/85 backdrop-blur-xl border-b border-border">
             <div className="container max-w-7xl mx-auto px-4 py-3">
-              <TabsList className="grid grid-cols-2 w-full max-w-md mx-auto bg-muted">
-                <TabsTrigger value="shops" className="data-[state=active]:gradient-hero data-[state=active]:text-white font-bold">
+              <TabsList className="grid grid-cols-2 w-full max-w-md mx-auto bg-muted rounded-lg p-1">
+                <TabsTrigger value="shops" className="data-[state=active]:bg-card data-[state=active]:text-foreground data-[state=active]:shadow-card font-semibold rounded-md">
                   {t("tab_shops")}
                 </TabsTrigger>
-                <TabsTrigger value="cafes" className="data-[state=active]:gradient-cafe data-[state=active]:text-white font-bold">
+                <TabsTrigger value="cafes" className="data-[state=active]:bg-card data-[state=active]:text-foreground data-[state=active]:shadow-card font-semibold rounded-md">
                   {t("tab_cafes")} ({CAFES.length})
                 </TabsTrigger>
               </TabsList>

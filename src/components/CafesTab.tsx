@@ -24,11 +24,11 @@ export function CafesTab() {
     <div>
       {/* Big warning banner */}
       <div className="container max-w-7xl mx-auto pt-6">
-        <div className="rounded-2xl border-2 border-warning bg-warning/10 px-5 py-4 flex items-start gap-3 animate-pulse-glow">
-          <AlertTriangle className="h-6 w-6 text-destructive flex-shrink-0 mt-0.5" />
+        <div className="rounded-lg border border-destructive/40 bg-destructive/8 px-5 py-4 flex items-start gap-3">
+          <AlertTriangle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
           <div>
-            <p className="font-extrabold text-destructive text-base mb-1">{t("warning_cafe_title")}</p>
-            <p className="text-sm font-semibold text-foreground/90">{t("warning_cafe_price")}</p>
+            <p className="font-semibold text-destructive text-sm mb-1">{t("warning_cafe_title")}</p>
+            <p className="text-sm text-foreground/80">{t("warning_cafe_price")}</p>
           </div>
         </div>
       </div>
@@ -41,10 +41,10 @@ export function CafesTab() {
               key={f.key}
               onClick={() => setFilter(f.key)}
               className={cn(
-                "whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-smooth border",
+                "whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-smooth border",
                 filter === f.key
-                  ? "bg-secondary text-secondary-foreground border-secondary shadow-glow"
-                  : "bg-card text-muted-foreground border-border hover:border-secondary"
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-card text-muted-foreground border-border hover:text-foreground hover:border-foreground/30"
               )}
             >
               {f.label}

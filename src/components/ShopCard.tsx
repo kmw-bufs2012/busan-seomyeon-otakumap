@@ -61,9 +61,9 @@ export function ShopCard({ shop }: { shop: Shop }) {
   };
 
   const statusColor =
-    shop.status === "verified" ? "bg-success text-success-foreground"
-    : shop.status === "partial" ? "bg-warning text-warning-foreground"
-    : "bg-destructive text-destructive-foreground";
+    shop.status === "verified" ? "bg-success/15 text-success"
+    : shop.status === "partial" ? "bg-warning/15 text-warning-foreground"
+    : "bg-destructive/15 text-destructive";
 
   const statusLabel =
     shop.status === "verified" ? `🟢 ${t("verified")}`
@@ -71,26 +71,26 @@ export function ShopCard({ shop }: { shop: Shop }) {
     : `🔴 ${t("unverified")}`;
 
   return (
-    <article className="group relative flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-card transition-smooth hover:scale-[1.02] hover:border-primary hover:shadow-glow">
+    <article className="group relative flex flex-col rounded-lg border border-border bg-card overflow-hidden shadow-card transition-smooth hover:-translate-y-0.5 hover:shadow-glow">
       {/* representative photo */}
       {shop.image && !imgErr && (
-        <div className="h-36 overflow-hidden">
+        <div className="h-40 overflow-hidden bg-muted">
           <img
             src={shop.image}
             alt={name}
             onError={() => setImgErr(true)}
-            className="w-full h-full object-cover transition-smooth group-hover:scale-105"
+            className="w-full h-full object-cover transition-smooth group-hover:scale-[1.03]"
           />
         </div>
       )}
 
       {/* category strip */}
-      <div className={`h-2 bg-${meta.color}`} style={{ backgroundColor: `hsl(var(--${meta.color}))` }} />
+      <div className="h-1" style={{ backgroundColor: `hsl(var(--${meta.color}))` }} />
 
-      {/* highlight badge (e.g. newly opened, specialty) — pink gradient strip */}
+      {/* highlight badge (e.g. newly opened, specialty) */}
       {shop.badge && (
-        <div className="px-5 py-2 bg-gradient-to-r from-primary/15 via-primary/10 to-transparent border-b border-primary/20">
-          <p className="text-xs font-bold text-primary leading-snug text-balance">
+        <div className="px-5 py-2 bg-accent border-b border-border">
+          <p className="text-xs font-semibold text-accent-foreground leading-snug text-balance">
             {shop.badge[lang] ?? shop.badge.ko}
           </p>
         </div>
@@ -101,9 +101,9 @@ export function ShopCard({ shop }: { shop: Shop }) {
         <header className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-bold text-lg leading-tight text-balance">{name}</h3>
+              <h3 className="font-semibold text-lg leading-tight text-balance">{name}</h3>
               {shop.floor && (
-                <Badge variant="outline" className="text-[10px] font-bold tracking-wider">
+                <Badge variant="outline" className="text-[10px] font-semibold tracking-wider rounded-md">
                   {shop.floor}
                 </Badge>
               )}
@@ -117,7 +117,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
           </div>
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className={cn("text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap", statusColor)}>
+              <span className={cn("text-[10px] font-semibold px-2 py-0.5 rounded-full whitespace-nowrap", statusColor)}>
                 {statusLabel}
               </span>
             </TooltipTrigger>
@@ -128,15 +128,15 @@ export function ShopCard({ shop }: { shop: Shop }) {
         {/* category + open */}
         <div className="flex items-center gap-2 flex-wrap text-xs">
           <span
-            className="inline-flex items-center gap-1 px-2 py-1 rounded-full font-semibold text-white"
-            style={{ backgroundColor: `hsl(var(--${meta.color}))` }}
+            className="inline-flex items-center gap-1.5 px-0 py-0 font-semibold text-[11px] uppercase tracking-[0.12em] text-muted-foreground"
           >
+            <span className="h-2 w-2 rounded-full" style={{ backgroundColor: `hsl(var(--${meta.color}))` }} />
             <span>{meta.emoji}</span>
             <span>{meta[lang as keyof typeof meta] as string ?? meta.en}</span>
           </span>
           <span
             className={cn(
-              "inline-flex items-center gap-1 px-2 py-1 rounded-full font-semibold",
+              "inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-semibold text-[11px]",
               open === true && "bg-success/15 text-success",
               open === false && "bg-muted text-muted-foreground",
               open === null && "bg-warning/15 text-warning-foreground"
@@ -148,7 +148,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
             {open === true ? `🟢 ${t("open_now")}` : open === false ? `🔴 ${t("closed")}` : `🟡 ${t("hours_unknown")}`}
           </span>
           {shop.taxFree && (
-            <span className="inline-flex items-center px-2 py-1 rounded-full bg-success/15 text-success font-bold">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-success/15 text-success font-semibold text-[11px]">
               {t("tax_free")}
             </span>
           )}
@@ -185,7 +185,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
         {/* tags */}
         <div className="flex flex-wrap gap-1">
           {shop.tags.slice(0, 3).map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-[10px] font-medium">{t(tag)}</Badge>
+            <Badge key={tag} variant="secondary" className="text-[10px] font-medium rounded-md">{t(tag)}</Badge>
           ))}
           {shop.tags.length > 3 && (
             <Badge variant="outline" className="text-[10px]">+{shop.tags.length - 3}</Badge>
@@ -230,7 +230,7 @@ export function ShopCard({ shop }: { shop: Shop }) {
       </div>
 
       {/* footer actions */}
-      <footer className="grid grid-cols-2 gap-2 p-3 bg-muted/30 border-t border-border">
+      <footer className="grid grid-cols-2 gap-2 p-3 bg-muted/40 border-t border-border">
         <Button asChild size="sm" variant="default" className="text-xs h-9">
           <a href={shop.naverMap} target="_blank" rel="noopener noreferrer">
             <MapPin className="h-3.5 w-3.5 mr-1" /> {t("naver_map")}
