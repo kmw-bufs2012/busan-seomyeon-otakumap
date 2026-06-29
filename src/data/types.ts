@@ -7,7 +7,9 @@ export type Category =
   | "cafecollab"
   | "arttoy"
   | "maid"
-  | "butler";
+  | "butler"
+  | "concafe"
+  | "maidbar";
 
 export type VerifyStatus = "verified" | "partial" | "unverified";
 
@@ -63,7 +65,7 @@ export interface CafeMenuItem {
 export interface Cafe {
   id: string;
   name: LocalizedText;
-  category: "maid" | "butler";
+  category: "maid" | "butler" | "concafe" | "maidbar";
   address: string;
   addressEn?: string;
   hours: string;
