@@ -29,6 +29,8 @@ export const SHOP_COORDS: Record<string, { lat: number; lng: number }> = {
   "brother-young":      { lat: 35.1535431, lng: 129.0600532 }, // [GMaps]
 
   // ── 중앙대로680번길 / 인근 ──
+  // 신천대로50번길 34 3층 — approximate (same street as brother-young)
+  "brother-3":          { lat: 35.1537500, lng: 129.0598500 },
   "brother-seomyeon":   { lat: 35.1535845, lng: 129.0593794 }, // [GMaps]
   "anime-club":         { lat: 35.1536447, lng: 129.0595202 }, // [GMaps]
   "omochaland":         { lat: 35.1537421, lng: 129.0616167 }, // [GMaps] 45-5 2F
