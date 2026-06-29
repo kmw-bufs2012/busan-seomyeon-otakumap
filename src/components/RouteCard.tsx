@@ -16,15 +16,15 @@ export function RouteCard({ route }: { route: Route }) {
   const isEmpty = route.stops.length === 0;
 
   return (
-    <article className="rounded-2xl overflow-hidden border border-border bg-card shadow-card transition-smooth hover:scale-[1.01] hover:shadow-glow flex flex-col">
-      <div className={`bg-gradient-to-br ${route.colorClass} px-5 py-4 text-white`}>
-        <div className="text-3xl mb-1">{route.emoji}</div>
-        <h3 className="font-extrabold text-lg text-balance leading-tight">{title}</h3>
+    <article className="rounded-lg overflow-hidden border border-border bg-card shadow-card transition-smooth hover:-translate-y-0.5 hover:shadow-glow flex flex-col">
+      <div className={`bg-gradient-to-br ${route.colorClass} px-5 py-3 text-white`}>
+        <div className="text-2xl mb-0.5">{route.emoji}</div>
+        <h3 className="font-semibold text-base text-balance leading-tight">{title}</h3>
       </div>
 
       <div className="p-5 flex-1 flex flex-col gap-3">
         {isEmpty ? (
-          <div className="flex-1 flex items-center justify-center min-h-32 rounded-xl border-2 border-dashed border-border bg-muted/30 px-4 py-6 text-center">
+          <div className="flex-1 flex items-center justify-center min-h-32 rounded-xl border border-dashed border-border bg-muted/40 px-4 py-6 text-center">
             <p className="text-xs text-muted-foreground leading-relaxed break-keep">
               {t("route_coming_soon")}
               {t("route_coming_soon_sub") && (
@@ -51,9 +51,9 @@ export function RouteCard({ route }: { route: Route }) {
             </div>
 
             <div className="grid grid-cols-3 gap-2 text-xs">
-              <Badge variant="secondary" className="justify-center py-1.5"><Clock className="h-3 w-3 mr-1" />{route.durationHours}h</Badge>
-              <Badge variant="secondary" className="justify-center py-1.5"><Wallet className="h-3 w-3 mr-1" />{fmtKRW(route.budgetMin)}–{fmtKRW(route.budgetMax)}</Badge>
-              <Badge variant="secondary" className="justify-center py-1.5"><Gauge className="h-3 w-3 mr-1" />{route.difficulty === "beginner" ? "★" : "★★"}</Badge>
+              <Badge variant="secondary" className="justify-center py-1.5 rounded-md text-xs font-medium"><Clock className="h-3 w-3 mr-1" />{route.durationHours}h</Badge>
+              <Badge variant="secondary" className="justify-center py-1.5 rounded-md text-xs font-medium"><Wallet className="h-3 w-3 mr-1" />{fmtKRW(route.budgetMin)}–{fmtKRW(route.budgetMax)}</Badge>
+              <Badge variant="secondary" className="justify-center py-1.5 rounded-md text-xs font-medium"><Gauge className="h-3 w-3 mr-1" />{route.difficulty === "beginner" ? "★" : "★★"}</Badge>
             </div>
           </>
         )}
@@ -61,7 +61,7 @@ export function RouteCard({ route }: { route: Route }) {
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button
-              className="mt-auto gradient-hero text-white border-0 disabled:opacity-50"
+              className="mt-auto bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
               disabled={isEmpty}
             >
               {t("view_route")} <ArrowRight className="h-4 w-4 ml-1" />
@@ -88,7 +88,7 @@ export function RouteCard({ route }: { route: Route }) {
                 const stopHours = localizeHours(stopRawHours, t, lang);
                 return (
                   <li key={id} className="flex gap-3 items-start p-3 rounded-xl border border-border bg-muted/30">
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full gradient-hero text-white font-bold text-sm flex-shrink-0">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm flex-shrink-0">
                       {i + 1}
                     </span>
                     <div className="min-w-0 flex-1">
