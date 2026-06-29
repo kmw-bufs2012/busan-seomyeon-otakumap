@@ -324,6 +324,27 @@ export const SHOPS: Shop[] = [
     status: "verified",
   },
   {
+    id: "brother-3",
+    name: {
+      ko: "브라더굿즈 부산 3호점", en: "Brother Goods Busan Branch 3", ja: "ブラザーグッズ 釜山3号店",
+      "zh-tw": "Brother Goods 釜山3號店", "zh-cn": "Brother Goods 釜山3号店",
+      vi: "Brother Goods Busan Chi Nhánh 3", th: "บราเธอร์กู้ดส์ สาขาปูซาน 3",
+    },
+    category: "anime",
+    address: "부산광역시 부산진구 신천대로50번길 34 3층",
+    addressEn: "34, Sincheon-daero 50beon-gil 3F, Busanjin-gu, Busan",
+    hours: "12:00–21:00",
+    hoursEn: "12:00–21:00",
+    instagram: "brother__goods",
+    naverMap: naver("브라더굿즈 부산 3호점"),
+    kakaoMap: kakao("브라더굿즈 부산 3호점"),
+    tags: ["tag_anime_goods", "tag_kuji", "tag_random_box"],
+    payments: ["card", "cash"],
+    status: "verified",
+    badge: "new",
+    notes: "인기 애니메이션 쿠지, 다양한 랜덤 굿즈. 원하는 상품을 선택 구매할 수 있는 확정 가챠존 운영. 2026년 6월 오픈.",
+  },
+  {
     id: "anime-club",
     name: {
       ko: "서면 애니메클럽", en: "Anime Club Seomyeon", ja: "アニメクラブ西面",
