@@ -5,7 +5,7 @@ import { CafeCard } from "./CafeCard";
 import { AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Filter = "all" | "maid";
+type Filter = "all" | "maid" | "concafe" | "maidbar";
 
 export function CafesTab() {
   const { t } = useI18n();
@@ -14,6 +14,8 @@ export function CafesTab() {
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: t("filter_all") },
     { key: "maid", label: "🎀 메이드카페" },
+    { key: "concafe", label: "🎭 콘셉트카페" },
+    { key: "maidbar", label: "🍸 메이드 바" },
   ];
 
   const filtered = useMemo(() => CAFES.filter((c) => filter === "all" || c.category === filter), [filter]);
